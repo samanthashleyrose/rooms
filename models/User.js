@@ -1,3 +1,7 @@
+//User table includes rows: id, name, email, and password
+//password is encrypted through bycrypt via a hook
+//user id does not have to be a uuid - it is uniquely generated via auto increment
+
 const { Model, DataTypes } = require('sequelize')
 
 const sequelize = require('../config/connection')

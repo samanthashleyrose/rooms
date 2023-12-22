@@ -1,3 +1,6 @@
+//user-room relation is many to many, so they must be related through a third table
+//columns include id, user_id, and room_id
+
 const { Model, DataTypes } = require('sequelize')
 
 const sequelize = require('../config/connection')

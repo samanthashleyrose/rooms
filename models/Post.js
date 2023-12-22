@@ -1,3 +1,7 @@
+//posts table includes id, content, user_id, and room_id
+//id does not have to be a uuid - it will be unique through auto increment
+//relations are 'one user ==> many posts' and 'one room ==> many posts'
+
 const { Model, DataTypes } = require('sequelize')
 
 const sequelize = require('../config/connection')

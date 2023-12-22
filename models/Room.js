@@ -1,3 +1,6 @@
+//room table includes id and name
+//room id uses uuid - this will be presented on the page as the key for entering a room
+
 const { Model, DataTypes } = require('sequelize')
 
 const sequelize = require('../config/connection')
