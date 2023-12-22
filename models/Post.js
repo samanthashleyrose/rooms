@@ -22,15 +22,13 @@ Post.init(
         },
         user_id: {
             type: DataTypes.STRING,
-            allowNull: false,
             references: {
                 model: 'user',
                 key: 'id'
             }
         },
         room_id: {
-            type: DataTypes.STRING,
-            allowNull: false,
+            type: DataTypes.UUID,
             references: {
                 model: 'room',
                 key: 'id'

@@ -17,7 +17,7 @@ User.hasMany(Post,{
 
 Post.belongsTo(Room, {
     foreignKey: 'room_id',
-    onDelete: 'CASCADE'
+    // onDelete: 'CASCADE'
 })
 Room.hasMany(Post,{
     foreignKey: 'room_id'
