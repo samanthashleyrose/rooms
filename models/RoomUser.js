@@ -1,4 +1,4 @@
-//user-room relation is many to many, so they must be related through a third table
+//user-room relation is many to many, so they must be related through the third table created below
 //columns include id, user_id, and room_id
 
 const { Model, DataTypes } = require('sequelize')

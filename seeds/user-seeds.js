@@ -1,3 +1,5 @@
+//seed data for users table
+
 const { User } = require('../models');
 
 const userData = [

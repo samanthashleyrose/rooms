@@ -1,3 +1,5 @@
+//index script to run all seed files to rooms_db database
+
 const sequelize = require('../config/connection');
 
 const seedPosts = require('./post-seeds')
