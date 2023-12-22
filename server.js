@@ -10,5 +10,5 @@ app.use(express.urlencoded({extended: true}))
 app.use(routes)
 
 app.listen(PORT, ()=>{
-    console.log('started er up, you say? you got it boss, whatever you say')
+    console.log('started er up, you say? you got it boss, whatever you say!')
 })
