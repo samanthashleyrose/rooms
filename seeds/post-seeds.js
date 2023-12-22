@@ -32,3 +32,6 @@ const postData = [
         room_id: 5,
       },
 ]
+const seedPosts = () => Post.bulkCreate(postData)
+
+module.exports = seedPosts
