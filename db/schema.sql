@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS rooms_db;
+
+CREATE DATABASE rooms_db;
