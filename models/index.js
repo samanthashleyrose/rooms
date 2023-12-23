@@ -9,17 +9,19 @@ const RoomUser = require('./RoomUser');
 
 Post.belongsTo(User, {
     foreignKey: 'user_id',
+    //posts will be deleted if the parent user is deleted
     onDelete: 'CASCADE'
 })
-User.hasMany(Post,{
+User.hasMany(Post, {
     foreignKey: 'user_id'
 })
 
 Post.belongsTo(Room, {
     foreignKey: 'room_id',
+    //posts will be deleted if the parent room is deleted
     onDelete: 'CASCADE'
 })
-Room.hasMany(Post,{
+Room.hasMany(Post, {
     foreignKey: 'room_id'
 })
 
