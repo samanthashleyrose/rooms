@@ -1,4 +1,4 @@
-//creates function to 
+//runs Sequelize() method to connect to the database
 
 require('dotenv').config();
 const Sequelize = require('sequelize');

@@ -21,6 +21,9 @@ router.get('/:username', async (req, res) => {
             },
             include: [{ model: Room }]
         });
+        if(!userData){
+            return res.status(404).json({message: 'username not found'})
+        }
         res.status(200).json(userData)
     } catch (err) {
         res.status(500).json(err)
