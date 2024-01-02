@@ -1,16 +1,18 @@
+//seed data for users table
+
 const { User } = require('../models');
 
 const userData = [
     {
         id: 1,
         name: 'user1',
-        email: 'email1@rooms.com',
+        email: 'eMAil1@rooMs.com',
         password: '112345678',
       },
       {
         id: 2,
         name: 'user2',
-        email: 'email2@rooms.com',
+        email: 'emaIL2@rooms.com',
         password: '212345678',
       },
       {

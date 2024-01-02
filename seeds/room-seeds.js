@@ -1,3 +1,5 @@
+//seed data for rooms table
+
 const { Room } = require('../models');
 
 const roomData = [

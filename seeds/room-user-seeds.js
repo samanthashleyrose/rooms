@@ -1,3 +1,5 @@
+//seed data for third table that links rooms and users
+
 const { RoomUser } = require('../models');
 
 const roomUserData = [
