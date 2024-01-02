@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     }
 })
 
-//route to get one user by username (/rooms/rooms/:username, method: GET)
+//route to get one user by username (/rooms/users/:username, method: GET)
 router.get('/:username', async (req, res) => {
     try {
         const userData = await User.findOne({
