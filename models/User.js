@@ -1,3 +1,7 @@
+//User table includes rows: id, name, email, and password
+//password is encrypted through bycrypt via a hook
+//user id does not have to be a uuid - it is uniquely generated via auto increment
+
 const { Model, DataTypes } = require('sequelize')
 
 const sequelize = require('../config/connection')
@@ -7,14 +11,15 @@ class User extends Model { }
 User.init(
     {
         id: {
-            type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDV4,
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
             allowNull: false,
             primaryKey: true
         },
         name: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true
         },
         email: {
             type: DataTypes.STRING,

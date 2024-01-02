@@ -1,14 +1,13 @@
-//posts table includes id, content, user_id, and room_id
-//id does not have to be a uuid - it will be unique through auto increment
-//relations are 'one user ==> many posts' and 'one room ==> many posts'
+//user-room relation is many to many, so they must be related through a third table
+//columns include id, user_id, and room_id
 
 const { Model, DataTypes } = require('sequelize')
 
 const sequelize = require('../config/connection')
 
-class Post extends Model { }
+class RoomUser extends Model { }
 
-Post.init(
+RoomUser.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -16,13 +15,8 @@ Post.init(
             allowNull: false,
             primaryKey: true
         },
-        content:{
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         user_id: {
-            type: DataTypes.STRING,
-            allowNull: false,
+            type: DataTypes.INTEGER,
             references: {
                 model: 'user',
                 key: 'id'
@@ -30,7 +24,6 @@ Post.init(
         },
         room_id: {
             type: DataTypes.STRING,
-            allowNull: false,
             references: {
                 model: 'room',
                 key: 'id'
@@ -42,7 +35,7 @@ Post.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'post'
+        modelName: 'room_user'
     }
 )
-module.exports = Post;
+module.exports = RoomUser;
