@@ -3,6 +3,8 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const http = require('http');
+const socketIo = require('socket.io');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
@@ -12,14 +14,18 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 // Creating an Express application
 const app = express();
-const PORT = process.env.port || 3001;
+const PORT = process.env.PORT || 3001;
 
 // Creating an instance of Handlebars with custom helpers
 const hbs = exphbs.create({ helpers });
 
+// Integrating http server with Socket.IO 
+const server = http.createServer(app);
+const io = socketIo(server);
+
 // Session configuration
 const sess = {
-    secret: 'Supah secret secret',  // Secret key for session encryption
+    secret: process.env.SECRET,  // Secret key for session encryption
     cookie: {
         maxAge: 1800000,  // Session duration in milliseconds (30 minutes)
         httpOnly: true,  // Restricting cookie access to HTTP only
@@ -50,7 +56,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Setting up routes from the controllers
 app.use(routes);
 
+// Socket.IO setup
+io.on('connection', (socket) => {
+    console.log('A user connected');
+  
+    socket.on('chat message', (msg) => {
+      console.log('message: ' + msg);
+      io.emit('chat message', msg);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User disconnected');
+    });
+  });
+
 // Syncing the database and starting the Express server
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('started er up, you say? you got it boss, whatever you say!'))
+    server.listen(PORT, () => console.log('started er up, you say? you got it boss, whatever you say!'))
 });
