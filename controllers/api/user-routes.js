@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const { User, Room } = require('../../models')
 
-//route to get all users (/rooms/rooms, method: GET)
+//route to get all users (/rooms/users, method: GET)
 router.get('/', async (req, res) => {
     try {
         const userData = await User.findAll({
@@ -31,7 +31,7 @@ router.get('/:username', async (req, res) => {
     }
 })
 
-//route to create a new user (/rooms/rooms/, method: POST)
+//route to create a new user (/rooms/users/, method: POST)
 // req.body should look like this:
 // {   name: 'username'
 //     email: 'email'
