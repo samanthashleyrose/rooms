@@ -27,7 +27,10 @@ router.get('/join-room', async (req, res) => {
 // Route for LOGIN
 router.get('/login', async (req, res) => {
     try {
-        res.render('login')
+        res.render('login', {
+            title: 'Log In!!!!',
+            style: 'login.css'
+        })
     } catch (err) {
         res.status(500).json(err);
     }
