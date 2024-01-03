@@ -1,11 +1,11 @@
-{{> head title="rooms - login" cssPath="/css/login.css"}}
+{{> head title="rooms - login" style="/css/login.css"}}
 
 <body>
     <!-- HEADER -->
     {{> header}}
     <!-- INPUT FIELDS -->
     <div class="form-container">
-        <form action="/api/users/login" method="POST">
+        <form action="/login" method="POST">
             <label for="input"></label>
             <br>
             <input id="email-input" type="text" placeholder="email" name="email">
