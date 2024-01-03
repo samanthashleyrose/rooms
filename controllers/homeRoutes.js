@@ -11,8 +11,20 @@ router.get('/', async (req, res) => {
 router.get('/login', async (req, res) => {
     try {
         res.render('login', {
-            title: 'Log In!!!!',
+            title: 'Log In',
             style: 'login.css'
+        })
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+// Route for SIGN UP
+router.get('/sign-up', async (req, res) => {
+    try {
+        res.render('sign-up', {
+            title: 'Sign Up',
+            style: 'sign-up.css'
         })
     } catch (err) {
         res.status(500).json(err);
