@@ -35,7 +35,7 @@ form {
 }
 
 label {
-    color: var(--cream-text);
+    color: var(--brown-text);
 }
 
 #code-input {
@@ -45,9 +45,14 @@ label {
     border-radius: 10px;
     border-width: 5px;
     border-style: double;
+    margin-top: 1%;
     margin-bottom: 1%;
     padding: 1%;
     font-family: Inconsolata;
+}
+
+input::placeholder {
+ color: var(--cream-text);
 }
 
 #join-btn {

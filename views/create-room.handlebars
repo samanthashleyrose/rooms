@@ -1,0 +1,16 @@
+<!-- HEADER -->
+{{> header}}
+<!-- INPUT FIELDS -->
+<div class="form-container">
+    <form action="/create-room" method="POST">
+        <label for="input">MAKE A ROOM!</label>
+        <br>
+        <input id="room-name-input" type="text" placeholder="NAME YOUR ROOM..." name="code">
+        <button type="submit" id="create-btn">create room</button>
+        <!-- Display error message -->
+        {{#if errorMessage}}
+        <p id="error-message">{{errorMessage}}</p>
+        {{/if}}
+    </form>
+</div>
+<script src="/js/create-room.js"></script>
