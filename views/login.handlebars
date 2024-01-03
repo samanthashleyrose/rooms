@@ -1,24 +1,19 @@
-{{> head title="rooms - login" style="/css/login.css"}}
-
-<body>
-    <!-- HEADER -->
-    {{> header}}
-    <!-- INPUT FIELDS -->
-    <div class="form-container">
-        <form action="/login" method="POST">
-            <label for="input"></label>
-            <br>
-            <input id="email-input" type="text" placeholder="email" name="email">
-            <br>
-            <input id="pass-input" type="password" placeholder="password" name="password">
-            <br>
-            <button type="submit" id="login-btn">Login</button>
-            <!-- Display error message -->
-            {{#if errorMessage}}
-            <p id="error-message">{{errorMessage}}</p>
-            {{/if}}
-        </form>
-    </div>
-    
-    <script src="/js/login.js"></script>
-</body>
+<!-- HEADER -->
+{{> header}}
+<!-- INPUT FIELDS -->
+<div class="form-container">
+    <form action="/login" method="POST">
+        <label for="input"></label>
+        <br>
+        <input id="email-input" type="text" placeholder="email" name="email">
+        <br>
+        <input id="pass-input" type="password" placeholder="password" name="password">
+        <br>
+        <button type="submit" id="login-btn">Login</button>
+        <!-- Display error message -->
+        {{#if errorMessage}}
+        <p id="error-message">{{errorMessage}}</p>
+        {{/if}}
+    </form>
+</div>
+<script src="/js/login.js"></script>
