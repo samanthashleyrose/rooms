@@ -1,5 +1,6 @@
 // Import modules
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 
 // Setting the default route to /home
 router.get('/', async (req, res) => {
