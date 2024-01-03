@@ -6,6 +6,7 @@
     --brown-text: rgba(51, 39, 7, 0.918);
     --cream-text: rgb(250, 231, 212);
     --input-fields: rgba(220, 122, 61, 0.605);
+    --hover:#ffffff;
 }
 
 body{
@@ -22,13 +23,20 @@ h2{
     color: var(--brown-text);
 }
 
+h1{
+  font-size: 80px;
+}
+
+h2{
+  font-size: 50px;
+}
 .button{
     color: var(--brown-text);
     align-items: center;
-    width: 200px;
+    width: 250px;
     height: 90px;
     border-radius:24px;
-    font-size: 25px;
+    font-size: 30px;
     margin: 20px;
     border: 2px solid;
     border-radius: 6px;
@@ -54,10 +62,19 @@ h2{
 .button:active {
   background-color: var(--input-fields);
   background-position: 0 0;
-  color: var(--cream-text);
-  border-color: var(--cream-text);
+  color: var(--hover);
+  border-color: var(--hover);
 }
 
 .button-24:active {
   opacity: .5;
+}
+
+nav{
+  display: flex;
+  justify-content: flex-end;
+  font-size: 40px;
+  margin-top: 30px;
+margin-right: 30px;
+  /* margin-left: 1600px; */
 }
