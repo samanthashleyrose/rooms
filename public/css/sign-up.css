@@ -10,10 +10,13 @@
 
 body {
     display: flex;
-    flex-direction: column;
     text-align: center;
     background-color: var(--background-color);
     font-family: Inconsolata;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0%;
 }
 
 /* HEADER */
