@@ -10,7 +10,10 @@ router.get('/', async (req, res) => {
 // Route for HOME screen
 router.get('/home', async (req, res) => {
     try {
-        res.render('homepage')
+        res.render('homepage', {
+            title: 'Welcome USER',
+            style: 'homepage.css'
+        })
     } catch (err) {
         res.status(500).json(err);
     }
@@ -19,7 +22,10 @@ router.get('/home', async (req, res) => {
 // Route for JOIN ROOM
 router.get('/join-room', async (req, res) => {
     try {
-        res.render('join-room')
+        res.render('join-room', {
+            title: 'Join A Room',
+            style: 'join-room.css'
+        })
     } catch (err) {
         res.status(500).json(err);
     }
@@ -40,13 +46,14 @@ router.get('/login', async (req, res) => {
 // Route for ROOM
 router.get('/room/:id', async (req, res) => {
     try {
-        res.render('room')
+        res.render('room', {
+            title: 'ROOM_NAME',
+            style: 'room.css'
+        })
     } catch (err) {
         res.status(500).json(err);
     }
 });
-
-
 
 // Export the router
 module.exports = router;
