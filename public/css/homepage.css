@@ -1,8 +1,63 @@
 /* MAIN COLORS & FONT SIZES */
 :root {
     --background-color: rgb(250, 231, 212);
-    --header-color: rgb(245, 172, 95);
+    --header-color: rgb(220, 122, 61);
+    --button-color: rgba(51, 39, 7, 0.918);
     --brown-text: rgba(51, 39, 7, 0.918);
     --cream-text: rgb(250, 231, 212);
-    --button-color: rgba(51, 39, 7, 0.918)
+    --input-fields: rgba(220, 122, 61, 0.605);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--background-color);
+    max-height: 100vh;
+    font-family: Inconsolata;
+}
+
+h1,
+h2{
+    color: var(--brown-text);
+}
+
+.button{
+    color: var(--brown-text);
+    align-items: center;
+    width: 200px;
+    height: 90px;
+    border-radius:24px;
+    font-size: 25px;
+    margin: 20px;
+    border: 2px solid;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+}
+
+
+
+
+
+.button:hover,
+.button:active {
+  background-color: var(--input-fields);
+  background-position: 0 0;
+  color: var(--cream-text);
+  border-color: var(--cream-text);
+}
+
+.button-24:active {
+  opacity: .5;
 }
