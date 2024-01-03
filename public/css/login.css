@@ -1,17 +1,27 @@
-/* MAIN COLORS & FONT SIZES */
+/* MAIN COLORS */
 :root {
     --background-color: rgb(250, 231, 212);
-    --header-color: rgb(245, 172, 95);
+    --header-color: rgb(220, 122, 61);
+    --button-color: rgba(51, 39, 7, 0.918);
     --brown-text: rgba(51, 39, 7, 0.918);
     --cream-text: rgb(250, 231, 212);
-    --button-color: rgba(51, 39, 7, 0.918)
+    --input-fields: rgba(220, 122, 61, 0.605);
 }
 
 body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: var(--header-color);
+    background-color: var(--background-color);
+    margin-top: 25%;
+    max-height: 100vh;
+    font-family: Inconsolata;
+}
+
+/* HEADER */
+h1,
+h2 {
+    color: var(--brown-text);
 }
 
 /* INPUT FIELDS */
@@ -22,7 +32,6 @@ body {
 }
 
 form {
-    margin-top: 10%;
     align-self: center;
     width: 100%;
 }
@@ -31,17 +40,29 @@ label {
     color: var(--cream-text);
 }
 
-#email-input {
-    color: var(--brown-text);
-}
-
+#email-input,
 #pass-input {
-    color: var(--brown-text);
+    background-color: var(--input-fields);
+    color: var(--cream-text);
+    border-color: var(--header-color);
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: double;
+    margin-bottom: 1%;
+    padding: 1%;
+    font-family: Inconsolata;
 }
 
 #login-btn {
-    background-color: var(--background-color);
-    color: var(--button-color);
+    background-color: var(--header-color);
+    color: var(--cream-text);
+    border-color: var(--header-color);
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: double;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-family: Inconsolata;
 }
 
 button:active {
@@ -50,5 +71,5 @@ button:active {
 }
 
 #error-message {
-    color: rgb(175, 25, 25);
+    color: rgb(171, 37, 37);
 }
