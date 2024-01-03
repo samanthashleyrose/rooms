@@ -1,0 +1,54 @@
+/* MAIN COLORS & FONT SIZES */
+:root {
+    --background-color: rgb(250, 231, 212);
+    --header-color: rgb(245, 172, 95);
+    --brown-text: rgba(51, 39, 7, 0.918);
+    --cream-text: rgb(250, 231, 212);
+    --button-color: rgba(51, 39, 7, 0.918)
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--header-color);
+}
+
+/* INPUT FIELDS */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+form {
+    margin-top: 10%;
+    align-self: center;
+    width: 100%;
+}
+
+label {
+    color: var(--cream-text);
+}
+
+#email-input {
+    color: var(--brown-text);
+}
+
+#pass-input {
+    color: var(--brown-text);
+}
+
+#login-btn {
+    background-color: var(--background-color);
+    color: var(--button-color);
+}
+
+button:active {
+    transform: translateY(5px);
+    transition: 200ms;
+}
+
+#error-message {
+    color: rgb(175, 25, 25);
+}
