@@ -1,0 +1,8 @@
+/* MAIN COLORS & FONT SIZES */
+:root {
+    --background-color: rgb(250, 231, 212);
+    --header-color: rgb(245, 172, 95);
+    --brown-text: rgba(51, 39, 7, 0.918);
+    --cream-text: rgb(250, 231, 212);
+    --button-color: rgba(51, 39, 7, 0.918)
+}

@@ -35,23 +35,27 @@ form {
 }
 
 label {
-    color: var(--cream-text);
+    color: var(--brown-text);
 }
 
-#email-input,
-#pass-input {
+#room-name-input {
     background-color: var(--input-fields);
     color: var(--cream-text);
     border-color: var(--header-color);
     border-radius: 10px;
     border-width: 5px;
     border-style: double;
+    margin-top: 1%;
     margin-bottom: 1%;
     padding: 1%;
     font-family: Inconsolata;
 }
 
-#login-btn {
+input::placeholder {
+ color: var(--cream-text);
+}
+
+#create-btn {
     background-color: var(--header-color);
     color: var(--cream-text);
     border-color: var(--header-color);
