@@ -10,7 +10,10 @@ router.get('/', async (req, res) => {
 // Route for HOME screen
 router.get('/home', async (req, res) => {
     try {
-        res.render('homepage')
+        res.render('homepage', {
+            title: 'Welcome USER',
+            style: 'homepage.css'
+        })
     } catch (err) {
         res.status(500).json(err);
     }
