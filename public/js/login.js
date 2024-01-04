@@ -1,20 +1,29 @@
-// var users
-async function getAllUsers() {
-   let users
-    try {
-        const response = await fetch('/rooms/users', {
-            method: 'GET'
-        });
-        users = await response.json()
-        // console.log(users)
-        // return users
+// Async function to handle the submission of the login form
+const loginFormHandler = async (event) => {
+    event.preventDefault();
+  
+    // Retrieving email and password from form inputs
+    const email = document.querySelector('#email-input').value.trim();
+    const password = document.querySelector('#pass-input').value.trim();
+  
+    // Checking if both email and password are provided
+    if (email && password) {
+      // Sending a POST request to log in the user
+      const response = await fetch('/rooms/users/login', {
+        method: 'POST',
+        body: JSON.stringify({ email, password }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+  
+      // Redirecting to the home page if the login is successful
+      // Console logging response otherwise
+      if (response.ok) {
+        document.location.replace('/home');
+      } else {
+        console.log(response.statusText);
+      }
     }
-    catch (err) {
-        console.log(err)
-    }
-    // const lettuce = Promise.resolve(users)
-    return users
-}
-// var user = getAllUsers()
-// console.log(user)
-getAllUsers().then(console.log)
+  };
+
+  // Event listener for login button form submission
+  document.querySelector('#login-btn').addEventListener('submit', loginFormHandler);
