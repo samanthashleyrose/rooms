@@ -3,7 +3,7 @@
     --background-color: rgb(250, 231, 212);
     --header-color: rgb(220, 122, 61);
     --button-color: rgba(51, 39, 7, 0.918);
-    --brown-text: rgba(51, 39, 7, 0.918);
+    --brown-text: rgb(72, 44, 14);
     --cream-text: rgb(250, 231, 212);
     --input-fields: rgba(220, 122, 61, 0.605);
 }
@@ -14,12 +14,20 @@ body {
     text-align: center;
     background-color: var(--background-color);
     font-family: Inconsolata;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0%;
 }
 
 /* HEADER */
 h1,
 h2 {
     color: var(--brown-text);
+}
+
+img {
+    width: 30%;
 }
 
 /* INPUT FIELDS */
