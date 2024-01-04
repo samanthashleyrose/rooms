@@ -45,4 +45,42 @@ router.post('/', async (req, res) => {
     }
 })
 
+// Route for LOGGING IN a user
+router.post('/login', async (req, res) => {
+    try {
+      // Finding user based off the email they entered
+      const userData = await User.findOne({ where: { email: req.body.email } });
+  
+      if (!userData) {
+        res
+          .status(400)
+          .json({ message: 'Incorrect email or password, please try again' });
+        return;
+      }
+  
+      // Checking if the password matches the hashed password from the database
+      const validPassword = await userData.checkPassword(req.body.password);
+  
+      // If password doesn't match, throw an error
+      if (!validPassword) {
+        res
+          .status(400)
+          .json({ message: 'Incorrect email or password, please try again' });
+        return;
+      }
+  
+      // If the password matches set the session user_id to the current users ID,
+      // AND set the session logged_in status to TRUE
+      req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.logged_in = true;
+  
+        res.json({ user: userData, message: 'You are now logged in!' });
+      });
+  
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
 module.exports = router
