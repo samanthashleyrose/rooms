@@ -25,11 +25,12 @@ const loginFormHandler = async (event) => {
   }
 };
 
+// Function to redirect the page to the SIGN UP page 
 const goToSignup = () => {
   console.log('signupbtn')
   document.location.replace('/sign-up')
 }
 
-// Event listener for login button form submission
+// Event listener for login button and sign up button
 document.querySelector('#login-form').addEventListener('submit', loginFormHandler);
 document.querySelector('#sign-up-btn').addEventListener('click', goToSignup);
