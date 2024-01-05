@@ -7,32 +7,33 @@
     --cream-text: rgb(250, 231, 212);
     --input-fields: rgba(220, 122, 61, 0.605);
     --hover:#ffffff;
-}
-
-body{
+  }
+  
+  body{
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: var(--background-color);
     max-height: 100vh;
     font-family: Inconsolata;
-}
-
-h1,
-h2{
+  }
+  
+  h1,
+  h2{
     color: var(--brown-text);
-}
-
-h1{
+  }
+  
+  h1{
   font-size: 80px;
-}
-
-h2{
+  }
+  
+  h2{
   font-size: 50px;
-}
-.button{
+  }
+  .button{
+    display: flex;
+    align-items: flex-end;
     color: var(--brown-text);
-    align-items: center;
     width: 90px;
     height: 50px;
     border-radius:24px;
@@ -43,7 +44,6 @@ h2{
     box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
     box-sizing: border-box;
     cursor: pointer;
-    display: inline-block;
     padding: 12px 14px;
     text-align: center;
     text-rendering: geometricprecision;
@@ -52,57 +52,92 @@ h2{
     -webkit-user-select: none;
     touch-action: manipulation;
     vertical-align: middle;
-}
-
-.button:hover,
-.button:active {
+  }
+  
+  .button:hover,
+  .button:active {
   background-color: var(--input-fields);
   background-position: 0 0;
   color: var(--hover);
   border-color: var(--hover);
-}
-
-.button-24:active {
+  }
+  
+  .button-24:active {
   opacity: .5;
-}
-
-nav{
+  }
+  
+  nav{
   display: flex;
   justify-content: flex-end;
   font-size: 40px;
   margin-top: 30px;
-margin-right: 30px;
-  /* margin-left: 1600px; */
-}
-
-.room-and-key{
+  margin-right: 30px;
+  }
+  
+  .room-key-wrap{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.room-key{
+  }
+  
+  .room-key{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
+    border: 2px solid;
+    border-radius: 20px;
     width: 370px;
     height: 70px;
-    
-}
-
-h3{
+  }
+  
+  #key{
+    opacity: 35%;
+    font-size: 25px;
+  }
+  
+  h3{
     margin: 0px;
     padding: 0px;
-}
-
-.messaging-box{
-    border: 1px solid;
+  }
+  
+  .messaging-box{
+    border: 2px solid;
     border-radius: 20px;
     margin: 40px;
-    height: 350px;
-}
-
-.type-message{
-    width: 65%;
-}
+    height: 600px;
+  }
+  
+  .wrapper{
+    border: 2px solid;
+    border-radius: 20px;
+    margin: 20px;
+  }
+  .upper-area{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message-wrap{
+    display: flex;
+    height: 50px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .send-button{
+    border: 1px solid;
+    border-radius: 5px;
+    height: 50px;
+    width: 100px;
+    font-size: 25px;
+    padding: 2px;
+  }
+  
+  .type-message{
+    border: 1px solid;
+    border-radius:5px;
+    height: 46px;
+    width: 45%;
+  }
+  
