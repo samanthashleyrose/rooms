@@ -19,6 +19,18 @@ router.get('/login', async (req, res) => {
     }
 });
 
+// Route for PROFILE
+router.get('/profile/:id', async (req, res) => {
+    try {
+        res.render('profile', {
+            title: 'USER_NAMEs profile',
+            style: 'profile.css'
+        })
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 // Route for SIGN UP
 router.get('/sign-up', async (req, res) => {
     try {
