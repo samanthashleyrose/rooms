@@ -3,7 +3,7 @@
     --background-color: rgb(250, 231, 212);
     --header-color: rgb(220, 122, 61);
     --button-color: rgba(51, 39, 7, 0.918);
-    --brown-text: rgba(51, 39, 7, 0.918);
+    --brown-text: rgb(72, 44, 14);
     --cream-text: rgb(250, 231, 212);
     --input-fields: rgba(220, 122, 61, 0.605);
 }
@@ -14,29 +14,28 @@ body {
     text-align: center;
     background-color: var(--background-color);
     font-family: Inconsolata;
-}
-
-/* HEADER */
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-img {
-    justify-content: left;
-    width: 10%
-}
-
-/* INPUT FIELDS */
-.form-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0%;
+}
+
+/* HEADER */
+h1,
+h2 {
+    color: var(--brown-text);
+}
+
+img {
+    width: 30%;
+}
+
+/* INPUT FIELDS */
+.profile-container,
+.form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 form {
@@ -45,28 +44,24 @@ form {
 }
 
 label {
-    color: var(--brown-text);
+    color: var(--cream-text);
 }
 
-#code-input {
+#email-input,
+#name-input {
     background-color: var(--input-fields);
     color: var(--cream-text);
     border-color: var(--header-color);
     border-radius: 10px;
     border-width: 5px;
     border-style: double;
-    margin-top: 1%;
     margin-bottom: 1%;
     padding: 1%;
     font-family: Inconsolata;
 }
 
-input::placeholder {
- color: var(--cream-text);
-}
-
-#home-btn,
-#join-btn {
+#update-btn,
+#login-btn {
     background-color: var(--header-color);
     color: var(--cream-text);
     border-color: var(--header-color);
