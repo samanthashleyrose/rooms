@@ -1,5 +1,6 @@
 // Import modules
 const router = require('express').Router();
+const { User, Room, Post, RoomUser } = require('../models')
 const withAuth = require('../utils/auth');
 
 // Setting the default route to /home
@@ -22,9 +23,15 @@ router.get('/login', async (req, res) => {
 // Route for PROFILE
 router.get('/profile/:id', async (req, res) => {
     try {
+
+        const userData = await User.findByPk(req.params.id);
+
+        const user = userData.get({ plain: true });
+
         res.render('profile', {
             title: 'USER_NAMEs profile',
-            style: 'profile.css'
+            style: 'profile.css',
+            user,
         })
     } catch (err) {
         res.status(500).json(err);
@@ -83,9 +90,28 @@ router.get('/create-room', async (req, res) => {
 // Route for ROOM
 router.get('/room/:id', async (req, res) => {
     try {
+        // Find room and include associated users
+        const roomId = req.params.id
+        const roomData = await Room.findByPk(roomId, {
+            include: [
+                {
+                    model: User,
+                    through: RoomUser
+                },
+                {
+                    model: Post,
+                    where: { room_id: roomId },
+                    required: false
+                }
+            ]
+        });
+
+        const room = roomData.get({ plain: true });
+
         res.render('room', {
             title: 'ROOM_NAME',
-            style: 'room.css'
+            style: 'room.css',
+            room,
         })
     } catch (err) {
         res.status(500).json(err);

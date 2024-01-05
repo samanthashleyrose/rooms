@@ -13,12 +13,16 @@ router.get('/', async (req, res) => {
     }
 })
 
-//route to create a room
-//must include room uuid, room name, and user_id (through RoomUser)
-router.post('/:uuid', async (req, res) => {
-    const roomData = await Room.create({
-
-    })
+// Route to CREATE a room
+router.post('/create-room', async (req, res) => {
+    try {
+        const roomData = await Room.create({
+            name: req.body.name
+        });
+        res.status(200).json(roomData)
+    } catch (err) {
+        res.status(500).json(err)
+    }
 })
 
 //route to update a room (to add a user or a post)
