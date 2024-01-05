@@ -1,0 +1,15 @@
+<!-- PROFILE INFO -->
+<div class="profile-container">
+    <form action="/profile" method="POST">
+        <h2 for="input">WELCOME, {{user.name}}</h2>
+        <br>
+        <img src="{{user.img}}" alt="user's profile image">
+        <p>{{user.name}}</p>
+        <p>{{user.email}}</p>
+        <button type="click" id="update-profile-btn">update profile</button>
+        <!-- Display error message -->
+        {{#if errorMessage}}
+        <p id="error-message">{{errorMessage}}</p>
+        {{/if}}
+    </form>
+</div>
