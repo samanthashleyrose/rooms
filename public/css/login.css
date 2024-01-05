@@ -59,6 +59,7 @@ label {
     font-family: Inconsolata;
 }
 
+#sign-up-btn,
 #login-btn {
     background-color: var(--header-color);
     color: var(--cream-text);
