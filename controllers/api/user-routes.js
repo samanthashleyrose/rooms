@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const { User, Room } = require('../../models')
+bcrypt = require('bcrypt')
 
 //route to get all users (/rooms/users, method: GET)
 router.get('/', async (req, res) => {
@@ -59,7 +60,7 @@ router.post('/login', async (req, res) => {
       }
   
       // Checking if the password matches the hashed password from the database
-      const validPassword = await userData.checkPassword(req.body.password);
+      const validPassword = await bcrypt.compareSync(req.body.password, userData.password);
   
       // If password doesn't match, throw an error
       if (!validPassword) {
