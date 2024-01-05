@@ -1,8 +1,9 @@
 <!-- HEADER -->
 {{> main-header}}
 <!-- INPUT FIELDS -->
+<button type="submit" id="sign-up-btn">sign up</button>
 <div class="form-container">
-    <form action="/login" method="POST" id="login-form">
+    <form id="login-form">
         <label for="input"></label>
         <br>
         <input id="email-input" type="text" placeholder="email" name="email">
@@ -10,7 +11,7 @@
         <input id="pass-input" type="password" placeholder="password" name="password">
         <br>
         <button type="submit" id="login-btn">login</button>
-        <button type="submit" id="sign-up-btn">sign up</button>
+        
         <!-- Display error message -->
         {{#if errorMessage}}
         <p id="error-message">{{errorMessage}}</p>
