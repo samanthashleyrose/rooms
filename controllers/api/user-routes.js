@@ -32,19 +32,25 @@ router.get('/:username', async (req, res) => {
     }
 })
 
-//route to create a new user (/rooms/users/, method: POST)
-// req.body should look like this:
-// {   name: 'username'
-//     email: 'email'
-//     password: '8 character password'}
-router.post('/', async (req, res) => {
+// Route to SIGN UP a user
+router.post('/sign-up', async (req, res) => {
     try {
-        const userData = await User.create(req.body)
-        res.status(200).json(userData)
-    }catch(err){
-        res.status(400).json(err.errors[0].message)
+        const userData = await User.create({
+          name: req.body.name,
+          email: req.body.email,
+          password: req.body.password,
+        });
+
+        req.session.save(() => {
+          req.session.user_id = userData.id;
+          req.session.logged_in = true;
+
+          res.status(200).json(userData)
+        });
+    } catch(err) {
+        res.status(500).json(err)
     }
-})
+});
 
 // Route for LOGGING IN a user
 router.post('/login', async (req, res) => {
