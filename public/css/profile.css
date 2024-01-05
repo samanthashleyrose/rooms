@@ -14,20 +14,18 @@ body {
     text-align: center;
     background-color: var(--background-color);
     font-family: Inconsolata;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0%;
 }
 
 /* HEADER */
-h1,
-h2 {
-    color: var(--brown-text);
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 img {
-    width: 30%;
+    justify-content: left;
+    width: 10%
 }
 
 /* INPUT FIELDS */
@@ -36,32 +34,53 @@ img {
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0%;
 }
 
 form {
     align-self: center;
-    width: 100%;
+    width: 50%;
 }
 
 label {
     color: var(--cream-text);
 }
 
-#email-input,
-#name-input {
+#user-name,
+#user-email,
+#name-input,
+#email-input {
     background-color: var(--input-fields);
     color: var(--cream-text);
     border-color: var(--header-color);
     border-radius: 10px;
     border-width: 5px;
     border-style: double;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
+    padding: 1%;
+    font-family: Inconsolata;
+    width: 100%
+}
+
+#file-label {
+    background-color: var(--header-color);
+    color: var(--cream-text);
+    border-color: var(--header-color);
+    border-radius: 0px;
+    border-width: 10px;
+    border-style: double;
     padding: 1%;
     font-family: Inconsolata;
 }
 
+#cancel-btn,
+#home-btn,
+#image-input,
 #update-btn,
-#login-btn {
+#update-profile-btn {
     background-color: var(--header-color);
     color: var(--cream-text);
     border-color: var(--header-color);
@@ -71,6 +90,21 @@ label {
     padding-left: 1%;
     padding-right: 1%;
     font-family: Inconsolata;
+}
+
+.custom-file-upload {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3%;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
 }
 
 button:active {
