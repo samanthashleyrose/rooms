@@ -141,3 +141,6 @@
     width: 45%;
   }
   
+  #home-btn{
+    display: none;
+  }
