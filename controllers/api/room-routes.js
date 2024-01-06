@@ -1,37 +1,19 @@
-
 const router = require('express').Router()
 const { Room, User, RoomUser, Post } = require('../../models')
-//route to see all rooms
-router.get('/', async (req, res) => {
+
+// Route to CREATE a room
+router.post('/create-room', async (req, res) => {
     try {
-        const roomData = await Room.findAll({
-            include: [{ model: User }, { model: Post }]
-        })
+        const roomData = await Room.create({
+            name: req.body.name
+        });
         res.status(200).json(roomData)
     } catch (err) {
         res.status(500).json(err)
     }
-})
+});
 
-//route to create a room
-//must include room uuid, room name, and user_id (through RoomUser)
-router.post('/:uuid', async (req, res) => {
-    const roomData = await Room.create({
-
-    })
-})
-
-//route to update a room (to add a user or a post)
-router.put('/:uuid', async (req, res) => {
-    const roomData = await Room.update({
-        where: {
-            id: req.params.uuid
-        },
-
-    })
-})
-
-//route to delete a room by id (uuid)
+// Route to DELETE a room by id (uuid)
 router.delete('/:uuid', async (req, res) => {
     try {
         const roomData = await Room.destroy({
@@ -46,6 +28,29 @@ router.delete('/:uuid', async (req, res) => {
     } catch (err) {
         res.status(500).json(err)
     }
+});
+
+// Route to see all rooms
+router.get('/', async (req, res) => {
+    try {
+        const roomData = await Room.findAll({
+            include: [{ model: User }, { model: Post }]
+        })
+        res.status(200).json(roomData)
+    } catch (err) {
+        res.status(500).json(err)
+    }
 })
+
+// Route to update a room (to add a user or a post)
+router.put('/:uuid', async (req, res) => {
+    const roomData = await Room.update({
+        where: {
+            id: req.params.uuid
+        },
+
+    })
+})
+
 
 module.exports = router
