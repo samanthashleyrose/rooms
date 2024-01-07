@@ -21,7 +21,7 @@ router.get('/login', async (req, res) => {
 });
 
 // Route for PROFILE
-router.get('/profile/:id', async (req, res) => {
+router.get('/profile/:id', withAuth, async (req, res) => {
     try {
 
         const userData = await User.findByPk(req.params.id);
@@ -51,7 +51,7 @@ router.get('/sign-up', async (req, res) => {
 });
 
 // Route for HOME screen
-router.get('/home', async (req, res) => {
+router.get('/home', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id);
         const user = userData.get({ plain: true });
@@ -66,7 +66,7 @@ router.get('/home', async (req, res) => {
 });
 
 // Route for JOIN ROOM
-router.get('/join-room', async (req, res) => {
+router.get('/join-room', withAuth, async (req, res) => {
     try {
         res.render('join-room', {
             title: 'Join A Room',
@@ -78,7 +78,7 @@ router.get('/join-room', async (req, res) => {
 });
 
 // Route for CREATE ROOM
-router.get('/create-room', async (req, res) => {
+router.get('/create-room', withAuth, async (req, res) => {
     try {
         res.render('create-room', {
             title: 'Create A Room!',
@@ -91,7 +91,7 @@ router.get('/create-room', async (req, res) => {
 
 
 // Route for ROOM
-router.get('/room/:id', async (req, res) => {
+router.get('/room/:id', withAuth, async (req, res) => {
     try {
         // Find room and include associated users
         const roomId = req.params.id
