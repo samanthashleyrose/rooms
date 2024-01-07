@@ -27,7 +27,6 @@ const loginFormHandler = async (event) => {
 
 // Function to redirect the page to the SIGN UP page 
 const goToSignup = () => {
-  console.log('signupbtn')
   document.location.replace('/sign-up')
 }
 
