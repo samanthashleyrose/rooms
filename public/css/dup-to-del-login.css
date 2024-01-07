@@ -1,0 +1,104 @@
+/* MAIN COLORS */
+:root {
+    --background-color: rgb(250, 231, 212);
+    --header-color: rgb(220, 122, 61);
+    --button-color: rgba(51, 39, 7, 0.918);
+    --brown-text: rgb(72, 44, 14);
+    --cream-text: rgb(250, 231, 212);
+    --input-fields: rgba(220, 122, 61, 0.605);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--background-color);
+    font-family: Inconsolata;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0%;
+}
+
+/* HEADER */
+img {
+    justify-content: center;
+    width: 35%
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--brown-text);
+    margin-bottom: 2%;
+}
+
+/* INPUT FIELDS */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+form {
+    align-self: center;
+    width: 100%;
+}
+
+label {
+    color: var(--cream-text);
+}
+
+#email-input,
+#pass-input {
+    background-color: var(--input-fields);
+    color: var(--cream-text);
+    border-color: var(--header-color);
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: double;
+    margin-bottom: 1%;
+    padding: 1%;
+    font-family: Inconsolata;
+    font-size: 1.4rem;
+    width: 35%;
+}
+
+/* BUTTONS */
+#sign-up-btn {
+    background-color: var(--header-color);
+    color: var(--cream-text);
+    border-color: var(--header-color);
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: double;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 2%;
+    margin-left: 1%;
+    font-family: Inconsolata;
+    font-size: 1.6rem;
+}
+
+#login-btn {
+    background-color: var(--header-color);
+    color: var(--cream-text);
+    border-color: var(--header-color);
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: double;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 2%;
+    margin-right: 1%;
+    font-family: Inconsolata;
+    font-size: 1.6rem;
+}
+
+button:active {
+    transform: translateY(5px);
+    transition: 200ms;
+}
+
+#error-message {
+    color: rgb(171, 37, 37);
+}
