@@ -57,17 +57,17 @@ router.post('/login', async (req, res) => {
     try {
       // Finding user based off the email they entered
       const userData = await User.findOne({ where: { email: req.body.email } });
-  
       if (!userData) {
         res
-          .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
         return;
       }
-  
+      
       // Checking if the password matches the hashed password from the database
+
       const validPassword = await bcrypt.compareSync(req.body.password, userData.password);
-  
+
       // If password doesn't match, throw an error
       if (!validPassword) {
         res
