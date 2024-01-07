@@ -21,13 +21,15 @@ body {
 }
 
 /* HEADER */
-h1,
-h2 {
-    color: var(--brown-text);
+img {
+    justify-content: center;
+    width: 35%
 }
 
-img {
-    width: 30%;
+h2 {
+    font-size: 2rem;
+    color: var(--brown-text);
+    margin-bottom: 2%;
 }
 
 /* INPUT FIELDS */
@@ -58,8 +60,11 @@ label {
     margin-bottom: 1%;
     padding: 1%;
     font-family: Inconsolata;
+    font-size: 1.4rem;
+    width: 35%;
 }
 
+/* BUTTON */
 #sign-up-btn {
     background-color: var(--header-color);
     color: var(--cream-text);
@@ -67,9 +72,11 @@ label {
     border-radius: 10px;
     border-width: 5px;
     border-style: double;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 2%;
     font-family: Inconsolata;
+    font-size: 1.6rem;
 }
 
 button:active {
