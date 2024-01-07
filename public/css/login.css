@@ -64,7 +64,6 @@ label {
 }
 
 /* BUTTONS */
-
 #sign-up-btn {
     background-color: var(--header-color);
     color: var(--cream-text);
