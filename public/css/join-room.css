@@ -6,6 +6,7 @@
     --brown-text: rgba(51, 39, 7, 0.918);
     --cream-text: rgb(250, 231, 212);
     --input-fields: rgba(220, 122, 61, 0.605);
+    --hover: rgb(212, 85, 6);
 }
 
 body {
@@ -25,7 +26,7 @@ header {
 
 img {
     justify-content: left;
-    width: 10%
+    width: 15%
 }
 
 /* INPUT FIELDS */
@@ -35,7 +36,7 @@ img {
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 85vh;
     margin: 0%;
 }
 
@@ -46,6 +47,7 @@ form {
 
 label {
     color: var(--brown-text);
+    font-size: 2.5rem;
 }
 
 #code-input {
@@ -57,25 +59,49 @@ label {
     border-style: double;
     margin-top: 1%;
     margin-bottom: 1%;
-    padding: 1%;
+    padding: 1.5%;
     font-family: Inconsolata;
+    font-size: 1.4rem;
+    width: 35%;
 }
 
 input::placeholder {
  color: var(--cream-text);
 }
 
-#home-btn,
+/* BUTTONS */
+#home-btn {
+    background-color: var(--header-color);
+    color: var(--cream-text);
+    border-color: var(--header-color);
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: none;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    font-family: Inconsolata;
+    font-size: 1.3rem;
+}
+
 #join-btn {
     background-color: var(--header-color);
     color: var(--cream-text);
     border-color: var(--header-color);
     border-radius: 10px;
     border-width: 5px;
-    border-style: double;
-    padding-left: 1%;
-    padding-right: 1%;
+    border-style: none;
+    padding: 1.6%;
     font-family: Inconsolata;
+    font-size: 1.6rem;
+}
+
+#join-btn:hover,
+#join-btn:active,
+#home-btn:hover,
+#home-btn:active {
+  background-color: var(--hover);
+  background-position: 0 0;
+  color: var(--cream-text);
 }
 
 button:active {
