@@ -53,8 +53,11 @@ router.get('/sign-up', async (req, res) => {
 // Route for HOME screen
 router.get('/home', async (req, res) => {
     try {
+        const userData = await User.findByPk(req.session.user_id);
+        const user = userData.get({ plain: true });
+
         res.render('homepage', {
-            title: 'Welcome USER',
+            title: `Welcome ${user.name}`,
             style: 'homepage.css'
         })
     } catch (err) {
