@@ -28,6 +28,11 @@ const createRoomFormHandler = async (event) => {
       }
     }
   };
+
+  const goToHome = () => {
+    document.location.replace('/home')
+  }
   
-  // Event listener for login button and sign up button
+  // Event listener for create room button and home button
+  document.querySelector('#home-btn').addEventListener('click', goToHome);
   document.querySelector('#create-room-form').addEventListener('submit', createRoomFormHandler);
