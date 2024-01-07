@@ -1,0 +1,20 @@
+<!-- PROFILE INPUT FIELDS -->
+<div class="form-container">
+    <form action="/profile-update" method="POST">
+        <label for="input">↓ UPDATE YOUR PROFILE ↓</label>
+        <br>
+        {{!-- may need to use middleware like 'multer' for handling file uploads "npm install multer" --}}
+        <div class="custom-file-upload">
+            <input type="file" id="image-input" name="profileImage" accept="image/*" class="inputfile">
+            <label for="image-input" id="file-label">choose a file</label>
+        </div>
+        <input id="name-input" type="text" placeholder="{{user.name}}" name="name">
+        <input id="email-input" type="text" placeholder="{{user.email}}" name="email">
+        <button type="submit" id="update-btn">update</button>
+        <button type="submit" id="cancel-btn">cancel</button>
+        <!-- Display error message -->
+        {{#if errorMessage}}
+        <p id="error-message">{{errorMessage}}</p>
+        {{/if}}
+    </form>
+</div>
