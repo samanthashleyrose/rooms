@@ -1,7 +1,6 @@
 <!-- HEADER -->
 {{> main-header}}
 <!-- INPUT FIELDS -->
-<button type="submit" id="sign-up-btn">sign up</button>
 <div class="form-container">
     <form id="login-form">
         <label for="input"></label>
@@ -10,7 +9,6 @@
         <br>
         <input id="pass-input" type="password" placeholder="password" name="password">
         <br>
-        <button type="submit" id="login-btn">login</button>
         
         <!-- Display error message -->
         {{#if errorMessage}}
@@ -18,6 +16,11 @@
         {{/if}}
     </form>
 </div>
-<script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
+{{!-- BUTTONS --}}
+<div class="btns-container">
+    <button type="submit" id="login-btn" form="login-form">login</button>
+    <button type="submit" id="sign-up-btn">sign up</button>
+</div>
+
 <script src="/js/login.js"></script>
 <script src="/js/socket.js"></script>
