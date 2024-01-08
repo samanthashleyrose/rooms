@@ -1,22 +1,15 @@
-<div class="wrapper">
-    <div class="upper-area">  
-        <div>
-            <button class="button">HOME</button>
-        </div>
+{{> header-nav}}
 
-        <div class="room-key-wrap">
-            <div class="room-key">
-                <h3 id="key">KEY GOES HERE</h3
-                ><button class="button">Copy</button>
-            </div>
+<div class="container">
+    <div class="chat-window">
+      <div class="chat-area">
+        <div class="chat-messages">
+          <!-- Chat Messages -->
         </div>
-    </div>    
-    <div class="messaging-box">
-        <li></li>
-    
+      </div>
+      <div class="user-input">
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+      </div>
     </div>
-    <div class="message-wrap">
-        <input  class="type-message" type="text">
-        <button class="send-button">Send</button>
-    </div>
-<div>
+  </div>
