@@ -64,6 +64,13 @@ label {
 }
 
 /* BUTTONS */
+.btns-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
 #sign-up-btn {
     background-color: var(--header-color);
     color: var(--cream-text);
