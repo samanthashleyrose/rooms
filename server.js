@@ -40,8 +40,10 @@ const sess = {
 };
 
 // Setting up session middleware
-app.use(session(sess));
-
+// app.use(session(sess));
+const sessionParser = session(sess)
+app.use(sessionParser)
+io.engine.use(sessionParser)
 // Setting up Handlebars as the view engine
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -59,12 +61,11 @@ app.use(routes);
 // Socket.IO setup - gives criteria for what should happen on the server side when a socket connection is opened
 io.on('connection', (socket) => {
     console.log('A user connected');
-// when a 'message' is transmitted
+// when a 'message' is recieved
     socket.on('message', (msg) => {
-      console.log('message: ' + msg);
-      try{
-      }catch{}
+      console.log('message: ', msg, socket.request.session);
 // take the 'msg' string and propogate it with key 'message'
+      
       io.emit('message', msg);
     });
   
@@ -75,5 +76,5 @@ io.on('connection', (socket) => {
 
 // Syncing the database and starting the Express server
 sequelize.sync({ force: false }).then(() => {
-    server.listen(PORT, () => console.log(`started er up, you say? you got it boss, whatever you say! http://localhost:${3001}`))
+    server.listen(PORT, () => console.log(`started er up, you say? you got it boss, whatever you say! http://localhost:${PORT}`))
 });
