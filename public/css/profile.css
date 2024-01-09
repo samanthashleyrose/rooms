@@ -25,7 +25,7 @@ header {
 
 img {
     justify-content: left;
-    width: 10%
+    width: 15%
 }
 
 /* INPUT FIELDS */
@@ -36,8 +36,13 @@ img {
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 85vh;
     margin: 0%;
+}
+
+h2 {
+    color: var(--brown-text);
+    font-size: 2.5rem;
 }
 
 form {
@@ -59,10 +64,12 @@ label {
     border-radius: 10px;
     border-width: 5px;
     border-style: double;
+    margin-top: 1%;
     margin-bottom: 3%;
-    padding: 1%;
+    padding: 1.5%;
     font-family: Inconsolata;
-    width: 100%
+    font-size: 1.4rem;
+    min-width: 90%;
 }
 
 #file-label {
@@ -76,8 +83,20 @@ label {
     font-family: Inconsolata;
 }
 
+#home-btn {
+    background-color: var(--header-color);
+    color: var(--cream-text);
+    border-color: var(--header-color);
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: none;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    font-family: Inconsolata;
+    font-size: 1.3rem;
+}
+
 #cancel-btn,
-#home-btn,
 #image-input,
 #update-btn,
 #update-profile-btn {
@@ -86,10 +105,12 @@ label {
     border-color: var(--header-color);
     border-radius: 10px;
     border-width: 5px;
-    border-style: double;
-    padding-left: 1%;
-    padding-right: 1%;
+    border-style: none;
+    padding: 1.6%;
+    margin-left: 1%;
+    margin-right: 1%;
     font-family: Inconsolata;
+    font-size: 1.6rem;
 }
 
 .custom-file-upload {
