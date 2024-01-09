@@ -7,7 +7,12 @@ router.post('/create-room', async (req, res) => {
         const roomData = await Room.create({
             name: req.body.name
         });
-        res.status(200).json(roomData)
+        const roomUserData = await RoomUser.create({
+            user_id: req.session.user_id,
+            room_id: roomData.id
+        })
+        const bigData = { roomData, roomUserData}
+        res.status(200).json(bigData)
     } catch (err) {
         res.status(500).json(err)
     }
