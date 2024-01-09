@@ -44,6 +44,7 @@ img {
   padding: 1.6%;
   font-family: Inconsolata;
   font-size: 2.5rem;
+  margin: 1%;
 }
 
 .code-container {
@@ -100,7 +101,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 1%;
   margin-bottom: 5%;
 }
 
