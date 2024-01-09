@@ -13,9 +13,10 @@
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
+    font-family: Inconsolata;
   }
 
-    img {
+  img {
       justify-content: left;
       width: 15%
   }
@@ -36,7 +37,6 @@
     border-style: none;
     padding-left: 1.5%;
     padding-right: 1.5%;
-    font-family: Inconsolata;
     font-size: 1.3rem;
 }
 
@@ -54,14 +54,55 @@
     background-color: var(--input-fields);
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
   }
-  
+
   .chat-area {
     height: 400px;
     overflow-y: scroll;
     padding: 20px;
   }
   
+  .chat-area::-webkit-scrollbar {
+    display: none;
+  }
+  
+   
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    ul li{
+      display:inline-block;
+      clear: both;
+      padding: 10px;
+      border-radius: 1.25rem;
+      margin-bottom: 2px;
+      background-color: var(--cream-text);
+      color: var(--brown-text);
+      font: 1.25rem;
+      float: left;
+    }
+  
+  #message-list::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%;
+    left: 1.5em; 
+    border: .75rem solid transparent;
+    border-top: none;
+  }
+
+html{
+  line-height: 1.5;
+	font-weight: 300;
+	color: #192229;
+	background: linear-gradient(135deg, #F4F2F3, #BFC6D0);
+}
   .chat-messages {
     display: flex;
     flex-direction: column;
