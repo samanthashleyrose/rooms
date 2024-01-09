@@ -1,5 +1,4 @@
-const socket = io(`ws://localhost:3001`)
-
+const socket = io()
 
 document.querySelector('#send-button').onclick = async () => {
     const currentURL = window.location.href
