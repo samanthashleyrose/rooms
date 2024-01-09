@@ -1,8 +1,13 @@
 <!-- HEADER -->
 {{> header-nav}}
-<!-- PROFILE INFO -->
-{{> profile-info}}
-{{!-- UPDATE PROFILE --}}
-{{> profile-update}}
+
+{{#if showProfileUpdate}}
+  <!-- UPDATE PROFILE -->
+  {{> profile-update}}
+{{else}}
+  <!-- PROFILE INFO -->
+  {{> profile-info}}
+{{/if}}
 
 <script src="/js/profile.js"></script>
+
