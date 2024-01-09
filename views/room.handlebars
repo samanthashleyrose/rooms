@@ -1,22 +1,34 @@
 {{> header-nav}}
+{{!-- Room Name and Code --}}
+<div class="room-info">
+  <h1 id="room-name">RANDOM ROOM NAME</h1>
+  <div class="code-container">
+    <p id="room-code">code / room key</p>
+    <button id="copy-btn">copy</button>
+  </div>
+</div>
+
+{{!-- socket.io script --}}
 <script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
+
 <div class="container">
-    <div class="chat-window">
-      <div class="chat-area">
-        <div class="chat-messages">
-          <!-- Chat Messages -->
-          {{log room}}
-          {{#each room.posts}}
-          <ul id="message-list">
-            <li>{{room.posts}}</li>
-          </ul>
-          {{/each}}
-        </div>
-      </div>
-      <div class="user-input">
-        <input type="text" id="message-input" placeholder="Type your message...">
-        <button id="send-button">Send</button>
+  <div class="chat-window">
+    <div class="chat-area">
+      <div class="chat-messages">
+        <!-- Chat Messages -->
+        {{log room}}
+        {{#each room.posts}}
+        <ul id="message-list">
+          <li>{{room.posts}}</li>
+        </ul>
+        {{/each}}
       </div>
     </div>
+    <div class="user-input">
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <button id="send-button">Send</button>
+    </div>
   </div>
+</div>
+
 <script src="/js/room.js"></script>
