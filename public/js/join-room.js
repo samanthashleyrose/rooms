@@ -10,6 +10,7 @@ const joinRoom = async (event) => {
         // Sending GET request to make sure the room exists
         const response = await fetch(`/room/${roomCode}`, {
             method: 'GET',
+            // method: 'POST',
             headers: { 'Content-Type': 'application/json' },
         });
 
