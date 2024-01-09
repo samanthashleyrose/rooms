@@ -1,10 +1,15 @@
 {{> header-nav}}
-
+<script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
 <div class="container">
     <div class="chat-window">
       <div class="chat-area">
         <div class="chat-messages">
           <!-- Chat Messages -->
+          {{!-- {{#each room.posts}} --}}
+          <ul id="message-list">
+            {{!-- <li>{{room.posts}}</li> --}}
+          </ul>
+          {{!-- {{/each}} --}}
         </div>
       </div>
       <div class="user-input">
@@ -13,3 +18,4 @@
       </div>
     </div>
   </div>
+<script src="/js/room.js"></script>
