@@ -10,9 +10,10 @@ router.get('/', async (req, res) => {
 
 router.post('/new-chat', async (req, res) => {
     try {
+        console.log(req.session)
         const postData = await Post.create({
             content: req.body.content,
-            user_id: req.session.user_id,
+            user_name: req.session.username,
             room_id: req.body.roomCode,
         });
 

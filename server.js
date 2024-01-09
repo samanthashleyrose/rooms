@@ -65,8 +65,12 @@ io.on('connection', (socket) => {
     socket.on('message', (msg) => {
       console.log('message: ', msg, socket.request.session);
 // take the 'msg' string and propogate it with key 'message'
-      
-      io.emit('message', msg);
+      const messageInfo = {
+        msg: msg,
+        sessionInfo: socket.request.session
+      }
+      const msgObject = JSON.stringify( messageInfo )
+      io.emit('message', msgObject);
     });
   
     socket.on('disconnect', () => {
