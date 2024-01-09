@@ -7,9 +7,20 @@ router.get('/', async (req, res) => {
 })
 
 
-//post route
-router.post('/', async (req, res) => {
 
+router.post('/new-chat', async (req, res) => {
+    try {
+        const postData = await Post.create({
+            content: req.body.content,
+            user_id: req.session.user_id,
+            room_id: req.body.roomCode,
+        });
+
+        res.status(200).json(postData)
+
+    } catch (err) {
+        res.status(500).json(err)
+    }
 })
 
 router.delete('/:id', async (req, res) => {

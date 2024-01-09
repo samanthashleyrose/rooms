@@ -14,16 +14,32 @@
     margin: 0;
     padding: 0;
   }
-  
-  img {
-    justify-content: left;
-    width: 10%
-}
+
+    img {
+      justify-content: left;
+      width: 15%
+  }
 
   header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 20px;
   }
   
+  #home-btn {
+    background-color: var(--header-color);
+    color: var(--cream-text);
+    border-color: var(--header-color);
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: none;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    font-family: Inconsolata;
+    font-size: 1.3rem;
+}
+
   .container {
     display: flex;
     justify-content: center;
