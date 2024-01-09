@@ -12,23 +12,33 @@
 <script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
 
 <div class="container">
-    <div class="chat-window">
-      <div class="chat-area">
-        <div class="chat-messages">
-          <!-- Chat Messages -->
-          {{!-- {{log room}}
-          {{#each room.posts}} --}}
-          <ul id="message-list">
-            {{!-- <li>{{room.posts}}</li> --}}
-          </ul>
-          {{!-- {{/each}} --}}
-        </div>
-      </div>
-      <div class="user-input">
-        <input type="text" id="message-input" placeholder="Type your message...">
-        <button id="send-button">Send</button>
+  <div class="chat-window">
+    <div class="chat-area">
+      <div class="chat-messages">
+        <!-- Chat Messages -->
+        {{!-- {{log room}}
+        {{#each room.posts}} --}}
+        <ul id="message-list">
+          {{!-- <li>{{room.posts}}</li> --}}
+        </ul>
+        {{!-- {{/each}} --}}
       </div>
     </div>
+    <div class="user-input">
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <button id="send-button">Send</button>
+    </div>
+  </div>
+</div>
+
+<div class="participants-container">
+  <div class="participants-info">
+    <h3 id="participants-title">PARTICIPANTS</h3>
+    <h4 id="host">host/admin: {{user.name}}sam</h4>
+    <h4 id="guests-title">invited guests:<h4>
+    <p id="guests">{{user.name}}will</p>
+    <p id="guests">{{user.name}}remi</p>
+    <p id="guests">{{user.name}}dakota</p>
   </div>
 </div>
 
