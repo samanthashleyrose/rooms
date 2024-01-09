@@ -34,3 +34,26 @@ const goToHome = () => {
 
 // Event listener for home btn
 document.querySelector('#home-btn').addEventListener('click', goToHome);
+
+// Function for room code copy btn to work
+document.addEventListener("DOMContentLoaded", function () {
+    const roomCode = document.getElementById("room-code");
+    const copyBtn = document.getElementById("copy-btn");
+  
+    copyBtn.addEventListener("click", function () {
+      // Create a textarea element to hold the room code
+      const textarea = document.createElement("textarea");
+      textarea.value = roomCode.innerText;
+      document.body.appendChild(textarea);
+  
+      // Select the text in the textarea
+      textarea.select();
+      document.execCommand("copy");
+
+      // Remove the textarea from the DOM
+      document.body.removeChild(textarea);
+
+      alert("Room code copied to clipboard!");
+    });
+  });
+  
