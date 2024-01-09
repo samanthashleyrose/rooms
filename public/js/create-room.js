@@ -18,7 +18,8 @@ const createRoomFormHandler = async (event) => {
     if (response.ok) {
 
       // Getting the newly generated room id from the response
-      const roomData = await response.json();
+      const {roomData} = await response.json();
+      // console.log(`\x1b[35m ${roomData} \x1b[0m`)
       const uuid = roomData.id;
 
       // Setting the location to the specified room
