@@ -43,6 +43,7 @@ router.post('/sign-up', async (req, res) => {
 
         req.session.save(() => {
           req.session.user_id = userData.id;
+          req.session.username = userData.name
           req.session.logged_in = true;
 
           res.status(200).json(userData)
@@ -80,6 +81,7 @@ router.post('/login', async (req, res) => {
       // AND set the session logged_in status to TRUE
       req.session.save(() => {
         req.session.user_id = userData.id;
+        req.session.username = userData.name
         req.session.logged_in = true;
   
         res.json({ user: userData, message: 'You are now logged in!' });
