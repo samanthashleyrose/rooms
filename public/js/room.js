@@ -13,15 +13,21 @@ document.querySelector('#send-button').onclick = async () => {
         body: JSON.stringify({content, roomCode}),
         headers: { 'Content-Type': 'application/json' },
       })
-    await console.log(content)
+    // await console.log(content)
     await socket.emit('message', content)
 }
 
 socket.on('message', content => {
 
+    const msgObject= JSON.parse(content)
+
+    const realMessage = msgObject.msg
+    const user = msgObject.sessionInfo.username
+    console.log(realMessage, user)
+    
     const messageBox = document.querySelector('#message-list')
     const el = document.createElement('li');
-    el.innerHTML = content;
+    el.innerHTML = `${user} - ${realMessage}`;
     messageBox.appendChild(el)
     
 console.log('client side message: ', content)
