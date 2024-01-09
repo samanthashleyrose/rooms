@@ -62,6 +62,8 @@ io.on('connection', (socket) => {
 // when a 'message' is transmitted
     socket.on('message', (msg) => {
       console.log('message: ' + msg);
+      try{
+      }catch{}
 // take the 'msg' string and propogate it with key 'message'
       io.emit('message', msg);
     });
