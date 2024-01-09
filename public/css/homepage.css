@@ -8,7 +8,7 @@
   --cream-text: rgb(250, 231, 212);
   --input-fields: rgba(220, 122, 61, 0.82);
   --hover: rgb(250, 231, 212);
-  --hamburger:#b68e6e;
+  --hamburger:rgba(108, 57, 18, 0.598);
 }
 
 body {
@@ -60,7 +60,6 @@ button {
   display: inline-block;
   text-rendering: geometricprecision;
   text-transform: none;
-
   touch-action: manipulation;
   vertical-align: middle;
 }
@@ -71,10 +70,6 @@ button:active {
   background-position: 0 0;
   color: var(--cream-text);
 }
-
-/* .button-24:active {
-  opacity: .5;
-} */
 
 button:active {
   transform: translateY(5px);
@@ -90,12 +85,10 @@ nav {
 }
 
 .logout {
-  background: #FF4742;
-  border: 1px solid #FF4742;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: var(--cream-text);
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
@@ -115,9 +108,9 @@ nav {
 
 .logout:hover,
 .logout:active {
-  background-color: initial;
+  background-color: var(--cream-text);
   background-position: 0 0;
-  color: #FF4742;
+  color: var(--brown-text);
 }
 
 .logout:active {
@@ -212,7 +205,7 @@ nav {
 .menu__item {
   display: block;
   padding: 12px 24px;
-  color: white;
+  color: var(--cream-text);
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 600;
@@ -221,6 +214,5 @@ nav {
 }
 
 .menu__item:hover {
-  background-color: #CFD8DC;
-
+  background-color: var(--brown-text);
 }
