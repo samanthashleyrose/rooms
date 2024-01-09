@@ -18,6 +18,20 @@ router.post('/create-room', async (req, res) => {
     }
 });
 
+// Route to JOIN a room
+router.post('/join-room', async (req, res) => {
+    try {
+        const roomUserData = await RoomUser.create({
+            user_id: req.session.user_id,
+            room_id: req.body.roomCode
+        })
+
+        res.status(200).json(roomUserData)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+});
+
 // Route to DELETE a room by id (uuid)
 router.delete('/:uuid', async (req, res) => {
     try {
