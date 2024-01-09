@@ -1,5 +1,5 @@
 <!-- PROFILE INFO -->
-<div class="profile-container">
+<div class="profile-container" id="profile-info">
     <form action="/profile" method="POST">
         <h2 for="input">WELCOME, {{user.name}}</h2>
         <br>
@@ -7,9 +7,7 @@
         <p id="user-name">{{user.name}}</p>
         <p id="user-email">{{user.email}}</p>
         <button type="click" id="update-profile-btn">update profile</button>
-        <!-- Display error message -->
-        {{#if errorMessage}}
-        <p id="error-message">{{errorMessage}}</p>
-        {{/if}}
     </form>
 </div>
+
+<script src="/js/profile.js"></script>
