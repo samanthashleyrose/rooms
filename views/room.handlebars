@@ -16,12 +16,11 @@
     <div class="chat-area">
       <div class="chat-messages">
         <!-- Chat Messages -->
-        {{!-- {{log room}}
-        {{#each room.posts}} --}}
         <ul id="message-list">
-          {{!-- <li>{{room.posts}}</li> --}}
+        {{#each room.posts}}
+          <li>{{user_id}} - {{content}}</li>
+        {{/each}}
         </ul>
-        {{!-- {{/each}} --}}
       </div>
     </div>
     <div class="user-input">
