@@ -23,5 +23,6 @@ socket.on('message', content => {
     const el = document.createElement('li');
     el.innerHTML = content;
     messageBox.appendChild(el)
+    
 console.log('client side message: ', content)
 });
