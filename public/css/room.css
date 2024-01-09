@@ -66,6 +66,10 @@
   .chat-area::-webkit-scrollbar {
     display: none;
   }
+
+  .chat-area::-webkit-scrollbar {
+    display: none;
+  }
   
    
     ul{
