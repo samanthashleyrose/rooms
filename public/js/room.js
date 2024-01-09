@@ -26,3 +26,11 @@ socket.on('message', content => {
     
 console.log('client side message: ', content)
 });
+
+// Function for redirecting to home page
+const goToHome = () => {
+    document.location.replace('/home')
+}
+
+// Event listener for home btn
+document.querySelector('#home-btn').addEventListener('click', goToHome);
