@@ -239,6 +239,8 @@ p {
   margin: 0%;
   padding: 2%;
   border-radius: 8px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
   font-size: 2rem;
 }
 
