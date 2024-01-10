@@ -18,14 +18,24 @@ body {
 
 /* HEADER */
 header {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 img {
-    justify-content: left;
     width: 15%
+}
+
+.img-container {
+    display: block;
+    text-align: left;
+    margin-right: 1%;
+}
+
+.home-btn-container {
+    text-align: right;
+    margin-right: 1%;
 }
 
 /* INPUT FIELDS */
@@ -90,8 +100,7 @@ label {
     border-radius: 10px;
     border-width: 5px;
     border-style: none;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+    padding: 15%;
     font-family: Inconsolata;
     font-size: 1.3rem;
 }
