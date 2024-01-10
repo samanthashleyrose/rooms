@@ -22,7 +22,7 @@ const signupFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/home');
       } else {
-        alert(response.statusText);
+        alert('Password needs to be at least 8 characters');
       }
     }
   };
