@@ -3,7 +3,7 @@
 
 ## Description
 
-<a href="">rööms</a> is a real-time chat application crafted with Node.js, Express, MySQL, and utilizes socket.io to manage the live communication between users and Heroku's server. Users can create individual login credentials which is associated with a personalized profile. The platform allows users to seamlessly join or create chat rooms using unique randomized codes. Share the your rooms' code with friends and begin conversing!
+<a href="https://rooms-3226fb27d847.herokuapp.com/login">rööms</a> is a real-time chat application crafted with Node.js, Express, MySQL, and utilizes socket.io to manage the live communication between users and Heroku's server. Users can create individual login credentials which is associated with a personalized profile. The platform allows users to seamlessly join or create chat rooms using unique randomized codes. Share the your rooms' code with friends and begin conversing!
 
 ## Table of Contents
 
