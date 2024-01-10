@@ -109,3 +109,135 @@ button:active {
 #error-message {
     color: rgb(171, 37, 37);
 }
+
+/* RESPONSIVENESS */
+
+/* XS */
+@media (min-width: 300px) and (max-width: 500px) {
+
+    /* HEADER */
+    img {
+        justify-content: center;
+        width: 50%
+    }
+
+    #catchphrase {
+        font-size: 1.2rem;
+        color: var(--brown-text);
+    }
+
+    #email-input,
+    #pass-input {
+        font-size: 1rem;
+        width: 40%;
+    }
+
+    #sign-up-btn,
+    #login-btn {
+        font-size: 1.2rem;
+    }
+}
+
+/* S */
+@media (min-width: 501px) and (max-width: 700px) {
+
+    /* HEADER */
+    img {
+        justify-content: center;
+        width: 40%
+    }
+
+    #catchphrase {
+        font-size: 1.4rem;
+        color: var(--brown-text);
+    }
+
+    #email-input,
+    #pass-input {
+        font-size: 1rem;
+        width: 35%;
+    }
+
+    #sign-up-btn,
+    #login-btn {
+        font-size: 1.4rem;
+    }
+}
+
+/* M */
+@media (min-width: 701px) and (max-width: 1000px) {
+
+    /* HEADER */
+    img {
+        justify-content: center;
+        width: 30%
+    }
+
+    #catchphrase {
+        font-size: 1.4rem;
+        color: var(--brown-text);
+    }
+
+    #email-input,
+    #pass-input {
+        font-size: 1rem;
+        width: 25%;
+    }
+
+    #sign-up-btn,
+    #login-btn {
+        font-size: 1.4rem;
+    }
+}
+
+/* L */
+@media (min-width: 1001px) and (max-width: 1500px) {
+
+    /* HEADER */
+    img {
+        justify-content: center;
+        width: 25%
+    }
+
+    #catchphrase {
+        font-size: 1.7rem;
+        color: var(--brown-text);
+    }
+
+    #email-input,
+    #pass-input {
+        font-size: 1.2rem;
+        width: 20%;
+    }
+
+    #sign-up-btn,
+    #login-btn {
+        font-size: 1.5rem;
+    }
+}
+
+/* XL */
+@media (min-width: 1501px) {
+
+    /* HEADER */
+    img {
+        justify-content: center;
+        width: 20%
+    }
+
+    #catchphrase {
+        font-size: 1.7rem;
+        color: var(--brown-text);
+    }
+
+    #email-input,
+    #pass-input {
+        font-size: 1.2rem;
+        width: 18%;
+    }
+
+    #sign-up-btn,
+    #login-btn {
+        font-size: 1.5rem;
+    }
+}

@@ -76,7 +76,7 @@ label {
 }
 
 input::placeholder {
- color: var(--cream-text);
+    color: var(--cream-text);
 }
 
 /* BUTTONS */
@@ -108,9 +108,9 @@ input::placeholder {
 #create-btn:active,
 #home-btn:hover,
 #home-btn:active {
-  background-color: var(--hover);
-  background-position: 0 0;
-  color: var(--cream-text);
+    background-color: var(--hover);
+    background-position: 0 0;
+    color: var(--cream-text);
 }
 
 button:active {
@@ -120,4 +120,160 @@ button:active {
 
 #error-message {
     color: rgb(171, 37, 37);
+}
+
+/* RESPONSIVENESS */
+
+/* XS */
+@media (min-width: 300px) and (max-width: 500px) {
+
+    /* HEADER */
+    img {
+        width: 20%
+    }
+
+    .home-btn-container {
+        margin-right: 4%;
+    }
+
+    #home-btn {
+        font-size: 1.1rem;
+    }
+
+    label {
+        font-size: 2rem;
+    }
+
+    #room-name-input {
+        font-size: 1.1rem;
+        width: 50%;
+    }
+
+    #create-btn {
+        padding: 2%;
+        font-size: 1.1rem;
+    }
+}
+
+/* S */
+@media (min-width: 501px) and (max-width: 700px) {
+
+    /* HEADER */
+    img {
+        width: 15%
+    }
+
+    .home-btn-container {
+        margin-right: 2%;
+    }
+
+    #home-btn {
+        font-size: 1.1rem;
+    }
+
+    label {
+        font-size: 2rem;
+    }
+
+    #room-name-input {
+        font-size: 1.1rem;
+        width: 40%;
+    }
+
+    #create-btn {
+        font-size: 1.1rem;
+    }
+}
+
+/* M */
+@media (min-width: 701px) and (max-width: 1000px) {
+
+    /* HEADER */
+    img {
+        width: 10%
+    }
+
+    .home-btn-container {
+        margin-right: 2%;
+    }
+
+    #home-btn {
+        padding: 15%;
+        font-size: 1.2rem;
+    }
+
+    label {
+        font-size: 2rem;
+    }
+
+    #room-name-input {
+        font-size: 1.2rem;
+        width: 35%;
+    }
+
+    #create-btn {
+        font-size: 1.2rem;
+    }
+}
+
+/* L */
+@media (min-width: 1001px) and (max-width: 1500px) {
+
+    /* HEADER */
+    img {
+        width: 10%
+    }
+
+    .home-btn-container {
+        margin-right: 2%;
+    }
+
+    #home-btn {
+        padding: 20%;
+        font-size: 1.2rem;
+    }
+
+    label {
+        font-size: 2.2rem;
+    }
+
+    #room-name-input {
+        font-size: 1.3rem;
+        width: 35%;
+    }
+
+    #create-btn {
+        font-size: 1.3rem;
+    }
+}
+
+/* XL */
+@media (min-width: 1501px) {
+
+    /* HEADER */
+    img {
+        width: 8%
+    }
+
+    .home-btn-container {
+        margin-right: 2%;
+    }
+
+    #home-btn {
+        padding: 20%;
+        font-size: 1.3rem;
+    }
+
+    label {
+        font-size: 2.2rem;
+    }
+
+    #room-name-input {
+        font-size: 1.5rem;
+        width: 35%;
+    }
+
+    #create-btn {
+        font-size: 1.5rem;
+    }
 }

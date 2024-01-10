@@ -131,7 +131,7 @@ img {
   padding: 20px;
 }
 
-.chat-area::-webkit-scrollbar{
+.chat-area::-webkit-scrollbar {
   display: none;
   -webkit-transition: opacity 0.5s ease-out;
   -webkit-animation: autoScrolling 5s linear infinite;
@@ -154,7 +154,7 @@ p {
   margin: .5%;
   background-color: var(--cream-text);
   color: var(--brown-text);
-  font: 1.25rem;
+  font-size: 1.25rem;
   width: max-content;
 }
 
@@ -269,4 +269,280 @@ p {
 
 h4 {
   margin: 0%;
+}
+
+/* RESPONSIVENESS */
+
+/* XS */
+@media (min-width: 300px) and (max-width: 500px) {
+
+  /* HEADER */
+  img {
+    width: 20%
+  }
+
+  .home-btn-container {
+    margin-right: 4%;
+  }
+
+  #home-btn {
+    font-size: 1.1rem;
+  }
+
+  #room-name {
+    font-size: 1.2rem;
+    margin-top: 5%;
+  }
+
+  #room-code {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 1rem;
+    width: 50%;
+  }
+
+  #copy-btn {
+    font-size: 1rem;
+    margin-left: 2%;
+  }
+
+  p {
+    font-size: .7rem;
+  }
+
+  #participants-title {
+    font-size: 1.3rem;
+  }
+
+  #message-input {
+    width: 10%;
+    font-size: .7rem;
+  }
+
+  #host,
+  #guests-title {
+    font-size: 1.2rem;
+  }
+
+  #guests {
+    font-size: 1rem;
+  }
+}
+
+/* S */
+@media (min-width: 501px) and (max-width: 700px) {
+
+  /* HEADER */
+  img {
+    width: 15%
+  }
+
+  .home-btn-container {
+    margin-right: 2%;
+  }
+
+  #home-btn {
+    font-size: 1.1rem;
+  }
+
+  #room-name {
+    font-size: 1.5rem;
+    margin-top: 5%;
+  }
+
+  #room-code {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 1.3rem;
+    width: 50%;
+  }
+
+  #copy-btn {
+    font-size: 1.3rem;
+    margin-left: 2%;
+  }
+
+  p {
+    font-size: .9rem;
+  }
+
+  #participants-title {
+    font-size: 1.3rem;
+  }
+
+  #message-input {
+    width: 10%;
+    font-size: .8rem;
+  }
+
+  #host,
+  #guests-title {
+    font-size: 1.2rem;
+  }
+
+  #guests {
+    font-size: 1rem;
+  }
+}
+
+/* M */
+@media (min-width: 701px) and (max-width: 1000px) {
+
+  /* HEADER */
+  img {
+    width: 10%
+  }
+
+  .home-btn-container {
+    margin-right: 2%;
+  }
+
+  #home-btn {
+    padding: 15%;
+    font-size: 1.2rem;
+  }
+
+  #room-name {
+    font-size: 1.7rem;
+    margin-top: 5%;
+  }
+
+  #room-code {
+    font-size: 1.3rem;
+    width: 50%;
+  }
+
+  #copy-btn {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  #participants-title {
+    font-size: 1.5rem;
+  }
+
+  #message-input {
+    width: 10%;
+    font-size: 1rem;
+  }
+
+  #host,
+  #guests-title {
+    font-size: 1.4rem;
+  }
+
+  #guests {
+    font-size: 1.2rem;
+  }
+}
+
+/* L */
+@media (min-width: 1001px) and (max-width: 1500px) {
+
+  /* HEADER */
+  img {
+    width: 10%
+  }
+
+  .home-btn-container {
+    margin-right: 2%;
+  }
+
+  #home-btn {
+    padding: 20%;
+    font-size: 1.2rem;
+  }
+
+  #room-name {
+    font-size: 1.9rem;
+    margin-top: 5%;
+  }
+
+  #room-code {
+    font-size: 1.4rem;
+    width: 50%;
+  }
+
+  #copy-btn {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  #participants-title {
+    font-size: 1.9rem;
+  }
+
+  #message-input {
+    width: 10%;
+    font-size: 1rem;
+  }
+
+  #host,
+  #guests-title {
+    font-size: 1.5rem;
+  }
+
+  #guests {
+    font-size: 1.3rem;
+  }
+}
+
+/* XL */
+@media (min-width: 1501px) {
+
+  /* HEADER */
+  img {
+    width: 8%
+  }
+
+  .home-btn-container {
+    margin-right: 2%;
+  }
+
+  #home-btn {
+    padding: 20%;
+    font-size: 1.3rem;
+  }
+
+  #room-name {
+    font-size: 1.9rem;
+    margin-top: 5%;
+  }
+
+  #room-code {
+    font-size: 1.5rem;
+    width: 50%;
+  }
+
+  #copy-btn {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  #participants-title {
+    font-size: 1.9rem;
+  }
+
+  #message-input {
+    width: 10%;
+    font-size: 1rem;
+  }
+
+  #host,
+  #guests-title {
+    font-size: 1.5rem;
+  }
+
+  #guests {
+    font-size: 1.3rem;
+  }
 }
