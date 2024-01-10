@@ -227,9 +227,10 @@ p {
 }
 
 .participants-info {
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
   background-color: var(--input-fields);
-  width: 80%;
   border-radius: 8px;
+  width: 80%;
   padding-bottom: 1.5%;
 }
 
