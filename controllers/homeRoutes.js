@@ -21,10 +21,10 @@ router.get('/login', async (req, res) => {
 });
 
 // Route for PROFILE
-router.get('/profile/:id', withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
     try {
-
-        const userData = await User.findByPk(req.params.id);
+        console.log(req.session)
+        const userData = await User.findByPk(req.session.user_id);
 
         const user = userData.get({ plain: true });
 
@@ -107,7 +107,7 @@ router.get('/room/:id', withAuth, async (req, res) => {
                     required: false
                 }
             ],
-            order: [ 
+            order: [
                 [Post, 'created_at', 'DESC']
             ],
         });
