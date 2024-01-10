@@ -8,7 +8,7 @@
   --cream-text: rgb(250, 231, 212);
   --input-fields: rgba(220, 122, 61, 0.82);
   --hover: rgb(250, 231, 212);
-  --hamburger:rgba(108, 57, 18, 0.598);
+  --hamburger: rgba(108, 57, 18, 0.598);
 }
 
 body {
@@ -36,7 +36,7 @@ img {
   width: 25%
 }
 
-h2 {
+#catchphrase {
   font-size: 2rem;
   color: var(--brown-text);
 }
@@ -215,4 +215,133 @@ nav {
 
 .menu__item:hover {
   background-color: var(--brown-text);
+}
+
+/* RESPONSIVENESS */
+
+/* XS */
+@media (min-width: 300px) and (max-width: 500px) {
+
+  /* HEADER */
+  img {
+    justify-content: center;
+    width: 60%
+  }
+
+  #catchphrase {
+    font-size: 1.3rem;
+    color: var(--brown-text);
+  }
+
+  .btns-container {
+    flex-direction: column;
+    min-width: 60%;
+  }
+
+  button {
+    padding: 5%;
+    font-size: 1.2rem;
+    margin: 2%;
+  }
+}
+
+/* S */
+@media (min-width: 501px) and (max-width: 700px) {
+
+  /* HEADER */
+  img {
+    justify-content: center;
+    width: 50%
+  }
+
+  #catchphrase {
+    font-size: 1.7rem;
+    color: var(--brown-text);
+  }
+
+  .btns-container {
+    flex-direction: column;
+    min-width: 50%;
+  }
+
+  button {
+    padding: 5%;
+    font-size: 1.5rem;
+    margin: 2%;
+  }
+}
+
+/* M */
+@media (min-width: 701px) and (max-width: 1000px) {
+
+  /* HEADER */
+  img {
+    justify-content: center;
+    width: 35%
+  }
+
+  #catchphrase {
+    font-size: 1.7rem;
+    color: var(--brown-text);
+  }
+
+  .btns-container {
+    min-width: 60%;
+  }
+
+  button {
+    padding: 4%;
+    font-size: 1.3rem;
+    margin: 2%;
+  }
+}
+
+/* L */
+@media (min-width: 1001px) and (max-width: 1500px) {
+
+  /* HEADER */
+  img {
+    justify-content: center;
+    width: 27%
+  }
+
+  #catchphrase {
+    font-size: 1.7rem;
+    color: var(--brown-text);
+  }
+
+  .btns-container {
+    min-width: 60%;
+  }
+
+  button {
+    padding: 3%;
+    font-size: 1.4rem;
+    margin: 2%;
+  }
+}
+
+/* XL */
+@media (min-width: 1501px) {
+
+  /* HEADER */
+  img {
+    justify-content: center;
+    width: 22%
+  }
+
+  #catchphrase {
+    font-size: 1.7rem;
+    color: var(--brown-text);
+  }
+
+  .btns-container {
+    min-width: 60%;
+  }
+
+  button {
+    padding: 2.2%;
+    font-size: 1.4rem;
+    margin: 2%;
+  }
 }
