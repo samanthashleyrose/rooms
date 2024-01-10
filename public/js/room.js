@@ -27,7 +27,7 @@ socket.on('message', content => {
     const messageBox = document.querySelector('#message-list')
     const el = document.createElement('li');
     el.innerHTML = `${user} - ${realMessage}`;
-    messageBox.appendChild(el)
+    messageBox.prepend(el)
     
 console.log('client side message: ', content)
 });
