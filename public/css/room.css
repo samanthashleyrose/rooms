@@ -146,18 +146,16 @@ ul {
   display: flex;
   flex-direction: column-reverse;
   overflow: auto;
+  max-height: 500px;
 }
 
 ul li {
-  display: inline-block;
-  clear: both;
   padding: 10px;
   border-radius: 1.25rem;
   margin-bottom: 2px;
   background-color: var(--cream-text);
   color: var(--brown-text);
   font: 1.25rem;
-  float: left;
 }
 
 #message-list::before {
