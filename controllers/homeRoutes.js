@@ -21,11 +21,9 @@ router.get('/login', async (req, res) => {
 });
 
 // Route for PROFILE
-router.get('/profile/:id', withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
     try {
-
-        const userData = await User.findByPk(req.params.id);
-
+        const userData = await User.findByPk(req.session.user_id);
         const user = userData.get({ plain: true });
 
         res.render('profile', {
@@ -107,13 +105,12 @@ router.get('/room/:id', withAuth, async (req, res) => {
                     required: false
                 }
             ],
-            order: [ 
+            order: [
                 [Post, 'created_at', 'DESC']
             ],
         });
 
         const room = roomData.get({ plain: true });
-        console.log(room)
         res.render('room', {
             title: 'ROOM_NAME',
             style: 'room.css',
@@ -124,35 +121,4 @@ router.get('/room/:id', withAuth, async (req, res) => {
     }
 });
 
-//route to get a room
-// router.post('/room/:id', withAuth, async (req, res) => {
-//     try {
-//         // Find room and include associated users
-//         const roomId = req.params.id
-//         const roomData = await Room.findByPk(roomId, {
-//             include: [
-//                 {
-//                     model: User,
-//                     through: RoomUser
-//                 },
-//                 {
-//                     model: Post,
-//                     where: { room_id: roomId },
-//                     required: false
-//                 }
-//             ]
-//         });
-
-//         const room = roomData.get({ plain: true });
-//         console.log(room)
-//         res.render('room', {
-//             title: 'ROOM_NAME',
-//             style: 'room.css',
-//             room,
-//         })
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
-// Export the router
 module.exports = router;

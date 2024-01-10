@@ -44,3 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+const goHomeLoser = () => document.location.replace("/home")
+document.querySelector("#home-btn").addEventListener("click", goHomeLoser)
