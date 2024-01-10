@@ -23,10 +23,10 @@
         </div>
       </div>
     </div>
-  <form class="user-input">
-    <input type="text" id="message-input" placeholder="Type your message...">
-    <button type="submit" id="send-button">Send</button>
-  </form>
+    <form class="user-input">
+      <input type="text" id="message-input" placeholder="Type your message...">
+      <button type="submit" id="send-button">Send</button>
+    </form>
   </div>
 </div>
 
@@ -34,10 +34,12 @@
   <div class="participants-info">
     <h3 id="participants-title">PARTICIPANTS</h3>
     <h4 id="host">host/admin: {{user.name}}sam</h4>
-    <h4 id="guests-title">invited guests:<h4>
-        <p id="guests">{{user.name}}will</p>
-        <p id="guests">{{user.name}}remi</p>
-        <p id="guests">{{user.name}}dakota</p>
+    <h4 id="guests-title">invited guests:</h4>
+    <div class="guest-list">
+      <h5 id="guests">{{user.name}}will</h5>
+      <h5 id="guests">{{user.name}}remi</h5>
+      <h5 id="guests">{{user.name}}dakota</h5>
+    </div>
   </div>
 </div>
 
