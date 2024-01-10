@@ -106,7 +106,10 @@ router.get('/room/:id', withAuth, async (req, res) => {
                     where: { room_id: roomId },
                     required: false
                 }
-            ]
+            ],
+            order: [ 
+                [Post, 'created_at', 'DESC']
+            ],
         });
 
         const room = roomData.get({ plain: true });

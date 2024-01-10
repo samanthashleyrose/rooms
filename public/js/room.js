@@ -1,5 +1,4 @@
-const socket = io(`ws://localhost:3001`)
-
+const socket = io()
 
 document.querySelector('#send-button').onclick = async () => {
     const currentURL = window.location.href
@@ -28,7 +27,7 @@ socket.on('message', content => {
     const messageBox = document.querySelector('#message-list')
     const el = document.createElement('li');
     el.innerHTML = `${user} - ${realMessage}`;
-    messageBox.appendChild(el)
+    messageBox.prepend(el)
     
 console.log('client side message: ', content)
 });

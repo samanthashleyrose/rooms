@@ -16,14 +16,24 @@ body {
 
 /* HEADER */
 header {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 img {
-  justify-content: left;
   width: 15%
+}
+
+.img-container {
+  display: block;
+  text-align: left;
+  margin-right: 1%;
+}
+
+.home-btn-container {
+  text-align: right;
+  margin-right: 1%;
 }
 
 /* ROOM INFO */
@@ -44,6 +54,7 @@ img {
   padding: 1.6%;
   font-family: Inconsolata;
   font-size: 2.5rem;
+  margin: 1%;
 }
 
 .code-container {
@@ -77,8 +88,7 @@ img {
   border-radius: 10px;
   border-width: 5px;
   border-style: none;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
+  padding: 15%;
   font-family: Inconsolata;
   font-size: 1.3rem;
 }
@@ -100,7 +110,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 1%;
   margin-bottom: 5%;
 }
 
@@ -133,18 +143,19 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: auto;
+  max-height: 500px;
 }
 
 ul li {
-  display: inline-block;
-  clear: both;
   padding: 10px;
   border-radius: 1.25rem;
   margin-bottom: 2px;
   background-color: var(--cream-text);
   color: var(--brown-text);
   font: 1.25rem;
-  float: left;
 }
 
 #message-list::before {
