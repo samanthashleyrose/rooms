@@ -79,6 +79,6 @@ io.on('connection', (socket) => {
   });
 
 // Syncing the database and starting the Express server
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     server.listen(PORT, () => console.log(`started er up, you say? you got it boss, whatever you say! http://localhost:${PORT}`))
 });

@@ -138,8 +138,7 @@ img {
   display: none;
 }
 
-
-ul {
+#message-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -149,13 +148,14 @@ ul {
   max-height: 500px;
 }
 
-ul li {
+p {
   padding: 10px;
   border-radius: 1.25rem;
-  margin-bottom: 2px;
+  margin: .5%;
   background-color: var(--cream-text);
   color: var(--brown-text);
   font: 1.25rem;
+  width: max-content;
 }
 
 #message-list::before {
@@ -260,9 +260,9 @@ html {
   margin-bottom: 1.5%;
   padding: 0%;
   font-size: 1.2rem;
+  text-align: center;
 }
 
-h4,
-p {
+h4 {
   margin: 0%;
 }
