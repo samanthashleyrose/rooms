@@ -1,7 +1,7 @@
 {{> header-nav}}
 {{!-- Room Name and Code --}}
 <div class="room-info">
-  <h1 id="room-name">RANDOM ROOM NAME</h1>
+  <h1 id="room-name">{{room.name}}</h1>
   <div class="code-container">
     <p id="room-code">{{room.id}}</p>
     <button id="copy-btn">copy</button>
@@ -16,17 +16,17 @@
     <div class="chat-area">
       <div class="chat-messages">
         <!-- Chat Messages -->
-        <ul id="message-list">
-        {{#each room.posts}}
-          <li>{{user_name}} - {{content}}</li>
-        {{/each}}
-        </ul>
+        <div id="message-list">
+          {{#each room.posts}}
+          <p>{{user_name}} - {{content}}</p>
+          {{/each}}
+        </div>
       </div>
     </div>
-    <div class="user-input">
-      <input type="text" id="message-input" placeholder="Type your message...">
-      <button id="send-button">Send</button>
-    </div>
+  <form class="user-input">
+    <input type="text" id="message-input" placeholder="Type your message...">
+    <button type="submit" id="send-button">Send</button>
+  </form>
   </div>
 </div>
 
@@ -35,9 +35,9 @@
     <h3 id="participants-title">PARTICIPANTS</h3>
     <h4 id="host">host/admin: {{user.name}}sam</h4>
     <h4 id="guests-title">invited guests:<h4>
-    <p id="guests">{{user.name}}will</p>
-    <p id="guests">{{user.name}}remi</p>
-    <p id="guests">{{user.name}}dakota</p>
+        <p id="guests">{{user.name}}will</p>
+        <p id="guests">{{user.name}}remi</p>
+        <p id="guests">{{user.name}}dakota</p>
   </div>
 </div>
 
