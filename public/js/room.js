@@ -1,10 +1,10 @@
 const socket = io()
+var currentURL = window.location.href
+var urlParts = currentURL.split('/')
+var roomCode = urlParts[urlParts.length - 1]
 
 document.querySelector('#send-button').onclick = async (event) => {
   event.preventDefault();
-  const currentURL = window.location.href
-  const urlParts = currentURL.split('/')
-  const roomCode = urlParts[urlParts.length - 1]
   //    await console.log(roomCode)
 
   const content = await document.querySelector('#message-input').value;
@@ -13,25 +13,29 @@ document.querySelector('#send-button').onclick = async (event) => {
     body: JSON.stringify({ content, roomCode }),
     headers: { 'Content-Type': 'application/json' },
   })
+  emitContent = JSON.stringify({
+    msgContent: content,
+    roomLocation: roomCode
+  })
   // await console.log(content)
-  await socket.emit('message', content);
+  await socket.emit('message', emitContent);
   document.querySelector('#message-input').value = '';
 }
 
 socket.on('message', content => {
 
   const msgObject = JSON.parse(content)
-
-  const realMessage = msgObject.msg
+  const intermediary = JSON.parse(msgObject.msg)
+  const realMessage = intermediary.msgContent
   const user = msgObject.sessionInfo.username
-  console.log(realMessage, user)
+  // console.log(realMessage, user)
 
   const messageBox = document.querySelector('#message-list')
   const el = document.createElement('p');
   el.innerHTML = `${user} - ${realMessage}`;
-  messageBox.prepend(el);
+  if (intermediary.roomLocation == window.location.href.split('/')[urlParts.length - 1]) { messageBox.prepend(el) };
 
-  console.log('client side message: ', content)
+  console.log('client side message: ', msgObject)
 });
 
 // Function for redirecting to home page
