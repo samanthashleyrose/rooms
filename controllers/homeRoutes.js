@@ -23,7 +23,6 @@ router.get('/login', async (req, res) => {
 // Route for PROFILE
 router.get('/profile', withAuth, async (req, res) => {
     try {
-        console.log(req.session)
         const userData = await User.findByPk(req.session.user_id);
 
         const user = userData.get({ plain: true });
