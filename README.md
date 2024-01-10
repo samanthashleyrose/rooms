@@ -22,36 +22,37 @@ No installation necessary!
 
 ## Usage
 
-![Login/Sign Up Screenshot]()
+![Login Screenshot](/public/assets/screenshots/login-sc.png)
+![Sign Up Screenshot](/public/assets/screenshots/sign-up-sc.png)
 <br>
 
 #### Account Creation and Homepage
 Begin by creating an account. Upon logging in, users are redirected to the homepage with the option to either **Create a Room** or **Join a Room**. On the left-hand side, a hamburger menu provides access to room lists, user profiles, and a logout button.
-<br>
-![Homepage Screenshot]()
+
+![Homepage Screenshot](/public/assets/screenshots/home-sc.png)
 
 #### Creating a Room
 Select **Create a Room** from the homepage to navigate to the /create-room page. Here, enter a room name and click **Create Room**. After creation, users are redirected to the room page, displaying the room name with it's corresponding code. Messages can be entered in the text box, and as participants join, their names are announced in the chat box. 
-<br>
-![Create Room Screenshot]()
-<br>
-![Room Example Screenshot]()
+
+![Create Room Screenshot](/public/assets/screenshots/create-room-sc.png)
+
+![Room Example Screenshot](/public/assets/screenshots/room-sc.png)
 
 #### Joining a Room
 Select **Join a Room** on the homepage to access the /join-room page. Whether this a room you've created or a friend has shared a room code with you, just enter the code and click **Join Room**.
-<br>
-![Join Room Screenshot]()
+
+![Join Room Screenshot](/public/assets/screenshots/join-room-sc.png)
 
 #### User Profile
 The profile page displays the logged-in user's name and email. To make changes, click the "Update Profile" button.
-<br>
+
 ![Profile Example Screenshot]()
 
 **Mobile View**
-<br>
-![Homepage Mobile View Screenshot]()
-<br>
-![Room Example Mobile View Screenshot]()
+
+![Homepage Mobile View Screenshot](/public/assets/screenshots/mobile-view-home-sc.png)
+
+![Room Example Mobile View Screenshot](/public/assets/screenshots/mobile-view-room-sc.png)
 
 ## Features
 
@@ -75,7 +76,7 @@ insert demo video
 
 ## How to Contribute 
 
-If you are to come across any problems while using <a href="">rööms</a>, feel free to open a new issue or submit a pull request through this repository. Your feedback and contributions are welcomed.
+If you are to come across any problems while using <a href="https://rooms-3226fb27d847.herokuapp.com/login">rööms</a>, feel free to open a new issue or submit a pull request through this repository. Your feedback and contributions are welcomed.
 
 Please don't hesitate to reach out regarding any concerns, propose improvements, or share suggestions. The rööms team looks forward to collaborating with you to enhance our application.
 
