@@ -3,24 +3,21 @@ const { User, Room } = require('../../models')
 bcrypt = require('bcrypt')
 
 //route to get all users (/rooms/users, method: GET)
-router.get('/', async (req, res) => {
-    try {
-        const userData = await User.findAll({
-            include: [{ model: Room }]
-        });
-        res.status(200).json(userData)
-    } catch (err) {
-        res.status(500).json(err)
-    }
-})
+// router.get('/', async (req, res) => {
+//     try {
+//         const userData = await User.findAll({
+//             include: [{ model: Room }]
+//         });
+//         res.status(200).json(userData)
+//     } catch (err) {
+//         res.status(500).json(err)
+//     }
+// })
 
 //route to get one user by username (/rooms/users/:username, method: GET)
-router.get('/:username', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
-        const userData = await User.findOne({
-            where: {
-                name: req.params.username
-            },
+        const userData = await User.findByPk(req.session.user_id,{
             include: [{ model: Room }]
         });
         if (!userData) {
