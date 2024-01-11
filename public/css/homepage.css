@@ -109,6 +109,7 @@ nav {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
+  font-family: Inconsolata;
 }
 
 .logout:hover,
@@ -205,6 +206,7 @@ nav {
   background-color: var(--hamburger);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
   transition-duration: .25s;
+  overflow-y: scroll;
 }
 
 .menu__item {
@@ -215,10 +217,28 @@ nav {
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
+  font-family: Inconsolata;
   transition-duration: .25s;
 }
 
-.menu__item:hover {
+p {
+  margin: 1%;
+}
+
+a {
+  display: block;
+  padding: 12px 24px;
+  color: var(--cream-text);
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: Inconsolata;
+  transition-duration: .25s;
+}
+
+.menu__item:hover,
+a:hover {
   background-color: var(--brown-text);
 }
 
