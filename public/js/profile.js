@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const profileInfo = document.getElementById("profile-info");
         const profileUpdate = document.getElementById("profile-update");
         if (profileInfo && profileUpdate) {
-            profileInfo.style.display = "block";
+            profileInfo.style.display = "flex";
             profileUpdate.style.display = "none";
         }
     };
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const profileUpdate = document.getElementById("profile-update");
         if (profileInfo && profileUpdate) {
             profileInfo.style.display = "none";
-            profileUpdate.style.display = "block";
+            profileUpdate.style.display = "flex";
         }
     };
 
