@@ -76,6 +76,7 @@ insert demo video
 - Enhanced profile page with photos and status/bio
 - User status indicators
 - Announcements in chat
+- Rooms can be deleted from hamburger menu 
 
 ## How to Contribute 
 
