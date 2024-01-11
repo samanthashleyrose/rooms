@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const updateProfileBtn = document.getElementById("update-profile-btn");
+
+    const userInfo = () => fetch("/rooms/users/", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+    })
+        .then(userInfo => userInfo.json())
+        .then(userObject => {
+            console.log(userObject)
+            return userObject
+        })
+    userInfo()
+
+
+    const updateProfileBtn = document.getElementById("edit-profile-btn");
     const updateBtn = document.getElementById("update-btn");
     const cancelBtn = document.getElementById("cancel-btn");
 
@@ -35,13 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const updateUserModel = () => {
 
         const newUsername = document.querySelector('#name-input').value
-        if (!newUsername || newUsername === user.name) {
-            newUsername = user.name
+        if (!newUsername || newUsername === userObject.name) {
+            newUsername = userObject.name
             return newUsername
         }
         const newEmail = document.querySelector('#email-input').value
-        if (!newEmail || newEmail === user.email) {
-            newEmail = user.name
+        if (!newEmail || newEmail === userObject.email) {
+            newEmail = userObject.name
             return newEmail
         }
         fetch("/rooms/users/update-profile", {
@@ -95,4 +108,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // };
 
 });
-console.log(user)
+// console.log(user)
