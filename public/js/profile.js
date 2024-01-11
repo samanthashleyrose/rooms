@@ -25,14 +25,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Calls showProfileUpdate() when update profile btn clicked on the profile-info page
     if (updateProfileBtn) {
-        updateProfileBtn.addEventListener("click", function () {
+        updateProfileBtn.addEventListener("click", function (event) {
+            event.preventDefault()
             showProfileUpdate();
         });
     }
 
     // Calls showProfileInfo() when update btn clicked on the profile-update page
     if (updateBtn) {
-        updateBtn.addEventListener("submit", function () {
+        updateBtn.addEventListener("submit", function (event) {
+            event.preventDefault()
             showProfileInfo();
         });
     }
@@ -43,7 +45,5 @@ document.addEventListener("DOMContentLoaded", function () {
             showProfileInfo();
         });
     }
+    showProfileInfo()
 });
-
-const goHomeLoser = () => document.location.replace("/home")
-document.querySelector("#home-btn").addEventListener("click", goHomeLoser)
