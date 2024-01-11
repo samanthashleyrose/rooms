@@ -5,7 +5,7 @@
     <form id="create-room-form">
         <label for="input">MAKE A ROOM!</label>
         <br>
-        <input id="room-name-input" type="text" placeholder="NAME YOUR ROOM..." name="code">
+        <input id="room-name-input" type="text" placeholder="NAME YOUR ROOM..." name="code" autocomplete="off">
         <button type="submit" id="create-btn">create room</button>
         <!-- Display error message -->
         {{#if errorMessage}}
