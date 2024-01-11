@@ -46,7 +46,7 @@ Select **Join a Room** on the homepage to access the /join-room page. Whether th
 #### User Profile
 The profile page displays the logged-in user's name and email. To make changes, click the "Update Profile" button.
 
-![Profile Example Screenshot]()
+![Profile Example Screenshot](/public/assets/screenshots/profile-sc.png)
 
 **Mobile View**
 
