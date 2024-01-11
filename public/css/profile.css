@@ -104,7 +104,7 @@ form {
 #cancel-btn,
 #image-input,
 #update-btn,
-#update-profile-btn {
+#edit-profile-btn {
     background-color: var(--header-color);
     color: var(--cream-text);
     border-color: var(--header-color);
@@ -198,7 +198,7 @@ footer {
     #cancel-btn,
     #image-input,
     #update-btn,
-    #update-profile-btn {
+    #edit-profile-btn {
         padding: 4%;
         font-size: 1rem;
     }
@@ -241,7 +241,7 @@ footer {
     #cancel-btn,
     #image-input,
     #update-btn,
-    #update-profile-btn {
+    #edit-profile-btn {
         padding: 3%;
         font-size: 1.2rem;
     }
@@ -285,7 +285,7 @@ footer {
     #cancel-btn,
     #image-input,
     #update-btn,
-    #update-profile-btn {
+    #edit-profile-btn {
         padding: 2.5%;
         font-size: 1.2rem;
     }
@@ -329,7 +329,7 @@ footer {
     #cancel-btn,
     #image-input,
     #update-btn,
-    #update-profile-btn {
+    #edit-profile-btn {
         padding: 2.5%;
         font-size: 1.3rem;
     }
@@ -373,7 +373,7 @@ footer {
     #cancel-btn,
     #image-input,
     #update-btn,
-    #update-profile-btn {
+    #edit-profile-btn {
         padding: 2.5%;
         font-size: 1.3rem;
     }
