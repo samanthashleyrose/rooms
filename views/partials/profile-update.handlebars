@@ -4,10 +4,10 @@
         <label for="input">↓ UPDATE YOUR PROFILE ↓</label>
         <br>
         {{!-- may need to use middleware like 'multer' for handling file uploads "npm install multer" --}}
-        <div class="custom-file-upload">
+        {{!-- <div class="custom-file-upload">
             <input type="file" id="image-input" name="profileImage" accept="image/*" class="inputfile">
             <label for="image-input" id="file-label">choose a file</label>
-        </div>
+        </div> --}}
         <input id="name-input" type="text" placeholder="{{user.name}}" name="name" autocomplete="off">
         <input id="email-input" type="text" placeholder="{{user.email}}" name="email" autocomplete="off">
         <br>
