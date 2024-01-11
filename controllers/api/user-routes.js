@@ -92,6 +92,8 @@ router.post('/login', async (req, res) => {
     }
   });
 
+  
+
   // POST route for logging out
 router.post('/logout', (req, res) => {
   // Kill the session
