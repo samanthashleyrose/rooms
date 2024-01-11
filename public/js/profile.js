@@ -1,16 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const userInfo = () => fetch("/rooms/users/", {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-    })
-        .then(userInfo => userInfo.json())
-        .then(userObject => {
-            console.log(userObject)
-            return userObject
-        })
-    userInfo()
-
 
     const updateProfileBtn = document.getElementById("edit-profile-btn");
     const updateBtn = document.getElementById("update-btn");
@@ -23,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (profileInfo && profileUpdate) {
             profileInfo.style.display = "flex";
             profileUpdate.style.display = "none";
-        }
+        }        
     };
 
     // Shows the profile-update partial on profile.handlebars
@@ -45,17 +34,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //function to update user model in the db
-    const updateUserModel = () => {
+    var updateUserModel = () => {
         console.log('works here chief')
-        const newUsername = document.querySelector('#name-input').value
-        if (!newUsername || newUsername === userObject.name) {
-            newUsername = userObject.name
-            return newUsername
+        const username = localStorage.getItem("username")
+        const email = localStorage.getItem("email")
+        let newUsername = document.querySelector('#name-input').value
+        if (!newUsername || newUsername === username) {
+            newUsername = username
+            // return newUsername
         }
-        const newEmail = document.querySelector('#email-input').value
-        if (!newEmail || newEmail === userObject.email) {
-            newEmail = userObject.name
-            return newEmail
+        let newEmail = document.querySelector('#email-input').value
+        if (!newEmail || newEmail === email) {
+            newEmail = email
+            // return newEmail
         }
         fetch("/rooms/users/update-profile", {
             method: "PUT",
@@ -70,28 +61,22 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                if (data.success) {
-                    showProfileInfo();
-                } else {
-                    const errorMessageElement = document.getElementById("error-message");
-                    if (errorMessageElement) {
-                        errorMessageElement.textContent = data.message;
-                    }
-                }
             })
             .catch(error => console.error("Error updating profile:", error))
+            
     }
 
     // Calls showProfileInfo() when update btn clicked on the profile-update page
-    if (updateBtn) {
-        console.log("workshere420!")
+    // if (updateBtn) {
         updateBtn.addEventListener("click", function (event) {
             event.preventDefault()
-            console.log("workshere69!")
             updateUserModel();
             showProfileInfo();
+            setTimeout(() => {
+                window.location.reload()
+            }, 100);
         });
-    }
+    // }
 
     // Calls showProfileInfo() when cancel btn clicked on the profile-update page
     if (cancelBtn) {
@@ -103,13 +88,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     showProfileInfo()
 
-    // Function to handle updating the profile
-    // const updateProfile = () => {
-    //     const profileUpdateForm = document.getElementById("profile-update-form");
-    //     const formData = new FormData(profileUpdateForm);
-
-    //     // Make an AJAX request to send the updated data to the server
-    // };
-
 });
-// console.log(user)

@@ -34,6 +34,8 @@ function addRoomToMenu(roomName) {
     .then((data) => {
       // Process the data and update the menu if needed
       console.log(data);
+      localStorage.setItem("username",`${data.name}`)
+      localStorage.setItem("email", `${data.email}`)
       for (x = 0; x < data.rooms.length; x++) {
         data.rooms[x].name;
         const createP = document.createElement("a");
