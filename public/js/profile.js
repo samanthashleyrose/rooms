@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //function to update user model in the db
     const updateUserModel = () => {
-
+        console.log('works here chief')
         const newUsername = document.querySelector('#name-input').value
         if (!newUsername || newUsername === userObject.name) {
             newUsername = userObject.name
@@ -84,8 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Calls showProfileInfo() when update btn clicked on the profile-update page
     if (updateBtn) {
-        updateBtn.addEventListener("submit", function (event) {
+        console.log("workshere420!")
+        updateBtn.addEventListener("click", function (event) {
             event.preventDefault()
+            console.log("workshere69!")
             updateUserModel();
             showProfileInfo();
         });
@@ -93,7 +95,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Calls showProfileInfo() when cancel btn clicked on the profile-update page
     if (cancelBtn) {
-        cancelBtn.addEventListener("click", function () {
+        cancelBtn.addEventListener("click", function (event) {
+            event.preventDefault()
+            console.log("herheyrehe")
             showProfileInfo();
         });
     }
