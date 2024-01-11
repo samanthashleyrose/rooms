@@ -32,3 +32,6 @@ function setRandomLogo() {
 
 // Call setRandomLogo when the page loads or on page redirect
 document.addEventListener("DOMContentLoaded", setRandomLogo);
+
+const goHomeLoser = () => document.location.replace("/home")
+document.querySelector("#home-btn").addEventListener("click", goHomeLoser)
