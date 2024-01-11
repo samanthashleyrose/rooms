@@ -225,7 +225,7 @@ p {
   margin: 1%;
 }
 
-a {
+.a {
   display: block;
   padding: 12px 24px;
   color: var(--cream-text);
@@ -238,7 +238,7 @@ a {
 }
 
 .menu__item:hover,
-a:hover {
+.a:hover {
   background-color: var(--brown-text);
 }
 
@@ -257,6 +257,10 @@ footer {
   font-size: 1rem;
   text-decoration: none;
   font-weight: bolder
+}
+
+#contact:hover{
+  background-color: none;
 }
 
 /* RESPONSIVENESS */

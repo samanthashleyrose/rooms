@@ -37,12 +37,11 @@ function addRoomToMenu(roomName) {
       for (x = 0; x < data.rooms.length; x++) {
         data.rooms[x].name;
         const createP = document.createElement("a");
-        // const createBr = document.createElement("br");
+        createP.classList.add('a');
         let roomURL = `${urlParts[0]}/room/${data.rooms[x].id}`;
         createP.href = roomURL;
         createP.innerHTML = data.rooms[x].name;
         list.appendChild(createP);
-        // list.appendChild(createBr);
       }
     })
     .catch((error) => {
