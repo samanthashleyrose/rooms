@@ -1,5 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const updateProfileBtn = document.getElementById("update-profile-btn");
+
+    const userInfo = () => fetch("/rooms/users/", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+    })
+        .then(userInfo => userInfo.json())
+        .then(userObject => {
+            console.log(userObject)
+            return userObject
+        })
+    userInfo()
+
+
+    const updateProfileBtn = document.getElementById("edit-profile-btn");
     const updateBtn = document.getElementById("update-btn");
     const cancelBtn = document.getElementById("cancel-btn");
 
@@ -31,10 +44,49 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    //function to update user model in the db
+    const updateUserModel = () => {
+
+        const newUsername = document.querySelector('#name-input').value
+        if (!newUsername || newUsername === userObject.name) {
+            newUsername = userObject.name
+            return newUsername
+        }
+        const newEmail = document.querySelector('#email-input').value
+        if (!newEmail || newEmail === userObject.email) {
+            newEmail = userObject.name
+            return newEmail
+        }
+        fetch("/rooms/users/update-profile", {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: newUsername,
+                email: newEmail
+            }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                if (data.success) {
+                    showProfileInfo();
+                } else {
+                    const errorMessageElement = document.getElementById("error-message");
+                    if (errorMessageElement) {
+                        errorMessageElement.textContent = data.message;
+                    }
+                }
+            })
+            .catch(error => console.error("Error updating profile:", error))
+    }
+
     // Calls showProfileInfo() when update btn clicked on the profile-update page
     if (updateBtn) {
         updateBtn.addEventListener("submit", function (event) {
             event.preventDefault()
+            updateUserModel();
             showProfileInfo();
         });
     }
@@ -48,35 +100,12 @@ document.addEventListener("DOMContentLoaded", function () {
     showProfileInfo()
 
     // Function to handle updating the profile
-    const updateProfile = () => {
-        const profileUpdateForm = document.getElementById("profile-update-form");
-        const formData = new FormData(profileUpdateForm);
+    // const updateProfile = () => {
+    //     const profileUpdateForm = document.getElementById("profile-update-form");
+    //     const formData = new FormData(profileUpdateForm);
 
-        // Make an AJAX request to send the updated data to the server
-        fetch("/rooms/users/update-profile", {
-            method: "POST",
-            body: {
-                name: document.querySelector('#name-input').value,
-                email: document.querySelector('#email-input').value
-            },
-        })
-            .then(response => response.json())
-            .then(data => {
-                // Handle the response from the server, e.g., show success or error messages
-                console.log(data);
-                if (data.success) {
-                    showProfileInfo();
-                    // Optionally update the displayed information on profile-info page
-                    // You might need to fetch the updated user data and update the DOM
-                } else {
-                    // Display an error message to the user
-                    const errorMessageElement = document.getElementById("error-message");
-                    if (errorMessageElement) {
-                        errorMessageElement.textContent = data.message;
-                    }
-                }
-            })
-            .catch(error => console.error("Error updating profile:", error));
-    };
+    //     // Make an AJAX request to send the updated data to the server
+    // };
 
 });
+// console.log(user)
