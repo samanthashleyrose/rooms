@@ -88,6 +88,23 @@ button:active {
     color: rgb(171, 37, 37);
 }
 
+footer {
+    margin-top: 8%;
+}
+
+#footer-msg {
+    color: var(--brown-text);
+    font-size: 1rem;
+    margin-bottom: 1%;
+}
+
+#contact {
+    color: var(--brown-text);
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bolder
+}
+
 /* RESPONSIVENESS */
 
 /* XS */
