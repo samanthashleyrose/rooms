@@ -1,6 +1,6 @@
 const socket = io()
 var currentURL = window.location.href
-var urlParts = currentURL.split('/')
+var urlParts = currentURL.split('/') 
 var roomCode = urlParts[urlParts.length - 1]
 
 document.querySelector('#send-button').onclick = async (event) => {
