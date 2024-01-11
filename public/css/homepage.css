@@ -36,6 +36,11 @@ img {
   width: 25%
 }
 
+a{
+  color: var(--cream-text);
+  text-decoration: none;
+}
+
 #catchphrase {
   font-size: 2rem;
   color: var(--brown-text);
