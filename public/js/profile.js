@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const profileInfo = document.getElementById("profile-info");
         const profileUpdate = document.getElementById("profile-update");
         if (profileInfo && profileUpdate) {
-            profileInfo.style.display = "block";
+            profileInfo.style.display = "flex";
             profileUpdate.style.display = "none";
         }
     };
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const profileUpdate = document.getElementById("profile-update");
         if (profileInfo && profileUpdate) {
             profileInfo.style.display = "none";
-            profileUpdate.style.display = "block";
+            profileUpdate.style.display = "flex";
         }
     };
 
@@ -46,4 +46,37 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     showProfileInfo()
+
+    // Function to handle updating the profile
+    const updateProfile = () => {
+        const profileUpdateForm = document.getElementById("profile-update-form");
+        const formData = new FormData(profileUpdateForm);
+
+        // Make an AJAX request to send the updated data to the server
+        fetch("/rooms/users/update-profile", {
+            method: "POST",
+            body: {
+                name: document.querySelector('#name-input').value,
+                email: document.querySelector('#email-input').value
+            },
+        })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from the server, e.g., show success or error messages
+                console.log(data);
+                if (data.success) {
+                    showProfileInfo();
+                    // Optionally update the displayed information on profile-info page
+                    // You might need to fetch the updated user data and update the DOM
+                } else {
+                    // Display an error message to the user
+                    const errorMessageElement = document.getElementById("error-message");
+                    if (errorMessageElement) {
+                        errorMessageElement.textContent = data.message;
+                    }
+                }
+            })
+            .catch(error => console.error("Error updating profile:", error));
+    };
+
 });
