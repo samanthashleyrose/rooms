@@ -23,7 +23,7 @@ No installation necessary!
 ## Usage
 
 ![Login Screenshot](/public/assets/screenshots/login-sc.png)
-![Sign Up Screenshot](/public/assets/screenshots/sign-up-sc.png)
+![Sign Up Screenshot](/public/assets/screenshots/signup-sc.png)
 <br>
 
 #### Account Creation and Homepage
@@ -50,9 +50,11 @@ The profile page displays the logged-in user's name and email. To make changes, 
 
 **Mobile View**
 
-![Homepage Mobile View Screenshot](/public/assets/screenshots/mobile-view-home-sc.png)
+![Homepage Mobile View Screenshot](/public/assets/screenshots/home-mobile-sc.png)
 
-![Room Example Mobile View Screenshot](/public/assets/screenshots/mobile-view-room-sc.png)
+![Room Example Mobile View Screenshot](/public/assets/screenshots/room-mobile-sc.png)
+
+![Profile Example Mobile View Screenshot](/public/assets/screenshots/profile-mobile-sc.png)
 
 ## Features
 
