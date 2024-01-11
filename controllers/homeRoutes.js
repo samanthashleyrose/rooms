@@ -27,7 +27,7 @@ router.get('/profile', withAuth, async (req, res) => {
         const user = userData.get({ plain: true });
 
         res.render('profile', {
-            title: 'USER_NAMEs profile',
+            title: `${user.name}s profile`,
             style: 'profile.css',
             user,
         })
@@ -67,7 +67,7 @@ router.get('/home', withAuth, async (req, res) => {
 router.get('/join-room', withAuth, async (req, res) => {
     try {
         res.render('join-room', {
-            title: 'Join A Room',
+            title: 'Join A Room!',
             style: 'join-room.css'
         })
     } catch (err) {
@@ -112,7 +112,7 @@ router.get('/room/:id', withAuth, async (req, res) => {
 
         const room = roomData.get({ plain: true });
         res.render('room', {
-            title: 'ROOM_NAME',
+            title: `${room.name}`,
             style: 'room.css',
             room,
         })
