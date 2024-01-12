@@ -99,7 +99,10 @@ router.put('/update-profile', async (req, res) => {
         id: req.session.user_id
       }
     })
-    res.status(200).json(userName)
+    if (userName) {
+      req.session.username = req.body.name
+      res.status(200).json(userName)
+    }
   } catch (err) {
     res.status(500).json(err)
   }
