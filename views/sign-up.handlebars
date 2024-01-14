@@ -1,5 +1,6 @@
 <!-- HEADER -->
 {{> main-header}}
+
 <!-- INPUT FIELDS -->
 <div class="form-container">
     <form id="signup-form">
@@ -12,6 +13,7 @@
         <input id="pass-input" type="password" placeholder="password" name="password">
         <br>
         <button type="submit" id="sign-up-btn">sign up</button>
+
         <!-- Display error message -->
         {{#if errorMessage}}
         <p id="error-message">{{errorMessage}}</p>
@@ -19,5 +21,8 @@
     </form>
 </div>
 
+{{!-- FOOTER --}}
 {{> footer}}
+
+{{!-- JS --}}
 <script src="/js/sign-up.js"></script>

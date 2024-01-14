@@ -84,10 +84,12 @@ button:active {
     transition: 200ms;
 }
 
+/* ERROR MESSAGE */
 #error-message {
     color: rgb(171, 37, 37);
 }
 
+/* FOOTER */
 footer {
     margin-top: 8%;
 }
