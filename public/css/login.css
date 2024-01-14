@@ -71,21 +71,6 @@ label {
     justify-content: center;
 }
 
-#sign-up-btn {
-    background-color: var(--header-color);
-    color: var(--cream-text);
-    border-color: var(--header-color);
-    border-radius: 10px;
-    border-width: 5px;
-    border-style: double;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-top: 2%;
-    margin-left: 1%;
-    font-family: Inconsolata;
-    font-size: 1.6rem;
-}
-
 #login-btn {
     background-color: var(--header-color);
     color: var(--cream-text);
@@ -101,15 +86,32 @@ label {
     font-size: 1.6rem;
 }
 
+#sign-up-btn {
+    background-color: var(--header-color);
+    color: var(--cream-text);
+    border-color: var(--header-color);
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: double;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 2%;
+    margin-left: 1%;
+    font-family: Inconsolata;
+    font-size: 1.6rem;
+}
+
 button:active {
     transform: translateY(5px);
     transition: 200ms;
 }
 
+/* ERROR MESSAGE */
 #error-message {
     color: rgb(171, 37, 37);
 }
 
+/* FOOTER */
 footer {
     margin-top: 8%;
 }

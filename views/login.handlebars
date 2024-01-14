@@ -1,5 +1,6 @@
 <!-- HEADER -->
 {{> main-header}}
+
 <!-- INPUT FIELDS -->
 <div class="form-container">
     <form id="login-form">
@@ -16,13 +17,16 @@
         {{/if}}
     </form>
 </div>
+
 {{!-- BUTTONS --}}
 <div class="btns-container">
     <button type="submit" id="login-btn" form="login-form">login</button>
     <button type="submit" id="sign-up-btn">sign up</button>
 </div>
 
+{{!-- FOOTER --}}
 {{> footer}}
 
+{{!-- JS --}}
 <script src="/js/login.js"></script>
 <script src="/js/socket.js"></script>

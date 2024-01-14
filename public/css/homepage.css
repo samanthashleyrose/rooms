@@ -36,7 +36,7 @@ img {
   width: 25%
 }
 
-a{
+a {
   color: var(--cream-text);
   text-decoration: none;
 }
@@ -63,10 +63,6 @@ button {
   margin: 20px;
   cursor: pointer;
   display: inline-block;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  touch-action: manipulation;
-  vertical-align: middle;
 }
 
 button:hover,
@@ -81,6 +77,7 @@ button:active {
   transition: 200ms;
 }
 
+/* HAMBURGER MENU */
 nav {
   display: flex;
   justify-content: flex-end;
@@ -92,7 +89,6 @@ nav {
 .logout {
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
   color: var(--cream-text);
   cursor: pointer;
   display: inline-block;
@@ -100,14 +96,8 @@ nav {
   font-weight: 800;
   line-height: 16px;
   min-height: 40px;
-  outline: 0;
   padding: 12px 14px;
   text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
   vertical-align: middle;
   font-family: Inconsolata;
 }
@@ -117,23 +107,6 @@ nav {
   background-color: var(--cream-text);
   background-position: 0 0;
   color: var(--brown-text);
-}
-
-.logout:active {
-  opacity: .5;
-}
-
-.my-container {
-  border: 1px solid green;
-}
-
-.my-row {
-  border: 3px solid var(--cream-text);
-  height: 300px;
-}
-
-.my-col {
-  border: 3px dotted blue;
 }
 
 .navbar-custom {
@@ -209,6 +182,11 @@ nav {
   overflow-y: hidden;
 }
 
+#profile-btn {
+  font-size: 1em;
+  font-weight: bolder;
+}
+
 .menu__item {
   display: block;
   padding: 12px 24px;
@@ -242,6 +220,7 @@ p {
   background-color: var(--brown-text);
 }
 
+/* FOOTER */
 footer {
   margin-bottom: 2%;
 }
@@ -259,7 +238,7 @@ footer {
   font-weight: bolder
 }
 
-#contact:hover{
+#contact:hover {
   background-color: none;
 }
 
