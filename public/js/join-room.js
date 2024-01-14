@@ -11,7 +11,7 @@ const joinRoom = async (event) => {
         const response = await fetch(`/rooms/rooms/join-room`, {
             // method: 'GET',
             method: 'POST',
-            body: JSON.stringify({roomCode}),
+            body: JSON.stringify({ roomCode }),
             headers: { 'Content-Type': 'application/json' },
         });
 
