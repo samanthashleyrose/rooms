@@ -126,6 +126,7 @@ img {
   align-items: center;
   margin-top: 1%;
   margin-bottom: 5%;
+  min-height: 500px;
 }
 
 .chat-window {
@@ -151,6 +152,7 @@ img {
 .chat-messages {
   display: flex;
   flex-direction: column;
+  height: 400px;
 }
 
 /* MESSAGES */
@@ -162,7 +164,6 @@ img {
   flex-direction: column-reverse;
   overflow-y: auto;
   max-height: 500px;
-
 }
 
 #message-list::before {
@@ -193,12 +194,17 @@ p {
   width: 75%;
 }
 
+form {
+  position: sticky;
+  bottom: 0px;
+  width: auto;
+}
+
 .user-input {
   display: flex;
   align-items: center;
   padding: 20px;
   background-color: var(--brown-text);
-  max-width: 1260px;
 }
 
 #message-input {
