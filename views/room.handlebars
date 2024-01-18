@@ -18,7 +18,7 @@
         <!-- Chat Messages -->
         <div id="message-list">
           {{#each room.posts}}
-          <p>{{user_name}}: {{content}}</p>
+          <p><span id="user-el">{{user_name}}:</span> <span id="message-el">{{content}}</span></p>
           {{/each}}
         </div>
       </div>
