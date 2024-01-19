@@ -579,3 +579,12 @@ footer {
     font-size: 1.3rem;
   }
 }
+#user-el {
+  /* font-family: Inconsolata; */
+  font-size: small;
+}
+
+#message-el{
+  /* font-family: Inconsolata; */
+  font-size: large;
+}
