@@ -61,9 +61,10 @@ app.use(routes);
 // Socket.IO setup - gives criteria for what should happen on the server side when a socket connection is opened
 io.on('connection', (socket) => {
     console.log('A user connected');
+    
 // when a 'message' is recieved
     socket.on('message', (msg) => {
-      console.log('message: ', msg, socket.request.session);
+
 // take the 'msg' string and propogate it with key 'message'
       const messageInfo = {
         msg: msg,
