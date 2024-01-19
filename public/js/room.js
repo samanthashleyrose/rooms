@@ -28,14 +28,20 @@ socket.on('message', content => {
   const intermediary = JSON.parse(msgObject.msg)
   const realMessage = intermediary.msgContent
   const user = msgObject.sessionInfo.username
-  // console.log(realMessage, user)
 
   const messageBox = document.querySelector('#message-list')
   const el = document.createElement('p');
-  el.innerHTML = `${user} - ${realMessage}`;
+  const userSpan = document.createElement('span')
+  userSpan.innerHTML = `${user}:`
+  userSpan.setAttribute('id', 'user-el')
+  const messageSpan = document.createElement('span')
+messageSpan.innerHTML = ` ${realMessage}`
+messageSpan.setAttribute('id', 'message-el')
+  el.appendChild(userSpan);
+  el.appendChild(messageSpan);
   if (intermediary.roomLocation == window.location.href.split('/')[urlParts.length - 1]) { messageBox.prepend(el) };
 
-  console.log('client side message: ', msgObject)
+  // console.log('client side message: ', msgObject)
 });
 
 // Function for redirecting to home page
