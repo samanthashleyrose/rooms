@@ -11,7 +11,7 @@
 
 body {
   background-color: var(--background-color);
-  /* margin-bottom: 5%; */
+  font-family: Inconsolata;
 }
 
 /* HEADER */
@@ -89,7 +89,6 @@ img {
   border-width: 5px;
   border-style: none;
   padding: 15%;
-  font-family: Inconsolata;
   font-size: 1.3rem;
 }
 
@@ -101,105 +100,8 @@ img {
   border-width: 5px;
   border-style: none;
   padding: 1.6%;
-  font-family: Inconsolata;
   font-size: 1.6rem;
   margin-left: 1%;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1%;
-  margin-bottom: 5%;
-}
-
-/* Chat Window Styles */
-.chat-window {
-  width: 80%;
-  max-width: 1260px;
-  background-color: var(--input-fields);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
-}
-
-.chat-area {
-  height: 400px;
-  overflow-y: scroll;
-  padding: 20px;
-}
-
-.chat-area::-webkit-scrollbar {
-  display: none;
-  -webkit-transition: opacity 0.5s ease-out;
-  -webkit-animation: autoScrolling 5s linear infinite;
-}
-
-#message-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column-reverse;
-  /* overflow: auto; */
-  overflow-y: auto;
-  max-height: 500px;
-}
-
-p {
-  padding: 10px;
-  border-radius: 1.25rem;
-  margin: .5%;
-  background-color: var(--cream-text);
-  color: var(--brown-text);
-  font-size: 1.25rem;
-  width: max-content;
-}
-
-#message-list::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  bottom: 100%;
-  left: 1.5em;
-  border: .75rem solid transparent;
-  border-top: none;
-}
-
-.chat-messages {
-  display: flex;
-  flex-direction: column;
-}
-
-.message {
-  margin-bottom: 10px;
-  background-color: var(--brown-text);
-  padding: 10px;
-  border-radius: 4px;
-}
-
-.user-input {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: var(--brown-text);
-  /* width: 75%; */
-  max-width: 1260px;
-  /* border-radius: 8px;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-  overflow: hidden;
-  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px; */
-}
-
-#message-input {
-  flex-grow: 1;
-  padding: 8px;
-  border: 1px solid var(--brown-text);
-  border-radius: 4px;
 }
 
 #send-button {
@@ -216,6 +118,102 @@ p {
   background-color: var(--header-color);
 }
 
+/* CHAT WINDOW */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  min-height: 500px;
+}
+
+.chat-window {
+  width: 80%;
+  max-width: 1260px;
+  background-color: var(--input-fields);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
+
+.chat-area {
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.chat-area::-webkit-scrollbar {
+  display: none;
+  -webkit-transition: opacity 0.5s ease-out;
+  -webkit-animation: autoScrolling 5s linear infinite;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+/* MESSAGES */
+#message-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+#message-list::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 100%;
+  left: 1.5em;
+  border: .75rem solid transparent;
+  border-top: none;
+}
+
+.message {
+  margin-bottom: 10px;
+  background-color: var(--brown-text);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+p {
+  padding: 10px;
+  border-radius: 1.25rem;
+  margin: .5%;
+  background-color: var(--cream-text);
+  color: var(--brown-text);
+  font-size: 1.25rem;
+  width: 75%;
+}
+
+form {
+  position: sticky;
+  bottom: 0px;
+  width: auto;
+}
+
+.user-input {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--brown-text);
+}
+
+#message-input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid var(--brown-text);
+  border-radius: 4px;
+}
+
 /* PARTICIPANTS */
 .participants-container {
   display: flex;
@@ -223,7 +221,6 @@ p {
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-family: Inconsolata;
 }
 
 .participants-info {
@@ -271,6 +268,7 @@ h4 {
   margin: 0%;
 }
 
+/* FOOTER */
 footer {
   display: block;
   text-align: center;
@@ -309,6 +307,7 @@ footer {
     font-size: 1.1rem;
   }
 
+  /* ROOM INFO */
   #room-name {
     font-size: 1.2rem;
     margin-top: 5%;
@@ -326,17 +325,19 @@ footer {
     margin-left: 2%;
   }
 
+  /* MESSAGES */
   p {
     font-size: .7rem;
-  }
-
-  #participants-title {
-    font-size: 1.3rem;
   }
 
   #message-input {
     width: 10%;
     font-size: .7rem;
+  }
+
+  /* PARTICIPANTS */
+  #participants-title {
+    font-size: 1.3rem;
   }
 
   #host,
@@ -365,6 +366,7 @@ footer {
     font-size: 1.1rem;
   }
 
+  /* ROOM INFO */
   #room-name {
     font-size: 1.5rem;
     margin-top: 5%;
@@ -382,17 +384,19 @@ footer {
     margin-left: 2%;
   }
 
+  /* MESSAGES */
   p {
     font-size: .9rem;
-  }
-
-  #participants-title {
-    font-size: 1.3rem;
   }
 
   #message-input {
     width: 10%;
     font-size: .8rem;
+  }
+
+  /* PARTICIPANTS */
+  #participants-title {
+    font-size: 1.3rem;
   }
 
   #host,
@@ -422,6 +426,7 @@ footer {
     font-size: 1.2rem;
   }
 
+  /* ROOM INFO */
   #room-name {
     font-size: 1.7rem;
     margin-top: 5%;
@@ -436,17 +441,19 @@ footer {
     font-size: 1.3rem;
   }
 
+  /* MESSAGES */
   p {
     font-size: 1.1rem;
-  }
-
-  #participants-title {
-    font-size: 1.5rem;
   }
 
   #message-input {
     width: 10%;
     font-size: 1rem;
+  }
+
+  /* PARTICIPANTS */
+  #participants-title {
+    font-size: 1.5rem;
   }
 
   #host,
@@ -476,6 +483,7 @@ footer {
     font-size: 1.2rem;
   }
 
+  /* ROOM INFO */
   #room-name {
     font-size: 1.9rem;
     margin-top: 5%;
@@ -490,17 +498,19 @@ footer {
     font-size: 1.3rem;
   }
 
+  /* MESSAGES */
   p {
     font-size: 1.2rem;
-  }
-
-  #participants-title {
-    font-size: 1.9rem;
   }
 
   #message-input {
     width: 10%;
     font-size: 1rem;
+  }
+
+  /* PARTICIPANTS */
+  #participants-title {
+    font-size: 1.9rem;
   }
 
   #host,
@@ -530,6 +540,7 @@ footer {
     font-size: 1.3rem;
   }
 
+  /* ROOM INFO */
   #room-name {
     font-size: 1.9rem;
     margin-top: 5%;
@@ -544,17 +555,19 @@ footer {
     font-size: 1.3rem;
   }
 
+  /* MESSAGES */
   p {
     font-size: 1.2rem;
-  }
-
-  #participants-title {
-    font-size: 1.9rem;
   }
 
   #message-input {
     width: 10%;
     font-size: 1rem;
+  }
+
+  /* PARTICIPANTS */
+  #participants-title {
+    font-size: 1.9rem;
   }
 
   #host,

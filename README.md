@@ -62,8 +62,6 @@ The profile page displays the logged-in user's name and email. To make changes, 
 - Unique room codes for each chat room
 - Hamburger menu for easy navigation
 
-insert demo video
-
 ## Future Development:
 
 **Potential Features - Coming Soon**

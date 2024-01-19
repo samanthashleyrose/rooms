@@ -1,5 +1,7 @@
+{{!-- HEADER & NAV --}}
 {{> header-nav}}
-{{!-- Room Name and Code --}}
+
+{{!-- ROOM NAME & CODE --}}
 <div class="room-info">
   <h1 id="room-name">{{room.name}}</h1>
   <div class="code-container">
@@ -11,11 +13,11 @@
 {{!-- socket.io script --}}
 <script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
 
+{{!-- CHAT AREA --}}
 <div class="container">
   <div class="chat-window">
     <div class="chat-area">
       <div class="chat-messages">
-        <!-- Chat Messages -->
         <div id="message-list">
           {{#each room.posts}}
           <p><span id="user-el">{{user_name}}:</span> <span id="message-el">{{content}}</span></p>
@@ -30,6 +32,7 @@
   </div>
 </div>
 
+{{!-- PARTICIPANTS --}}
 <div class="participants-container">
   <div class="participants-info">
     <h3 id="participants-title">PARTICIPANTS</h3>
@@ -43,5 +46,8 @@
   </div>
 </div>
 
+{{!-- FOOTER --}}
 {{> footer}}
+
+{{!-- JS --}}
 <script src="/js/room.js"></script>
